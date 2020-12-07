@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">android-boilerplate-mvvm</string>
+
+    <string name="random_users">Random Users</string>
+    <string name="session_expired">Session expired!</string>
+    <string name="no_internet_connectivity">No internet connectivity!</string>
+    <string name="please_confirm">Please Confirm</string>
+    <string name="okay">Okay</string>
+
+</resources>
