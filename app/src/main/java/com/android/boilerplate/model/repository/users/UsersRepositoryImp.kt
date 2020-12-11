@@ -4,11 +4,17 @@ import com.android.boilerplate.model.data.local.database.Database
 import com.android.boilerplate.model.data.local.database.entities.User
 import com.android.boilerplate.model.data.remote.RemoteApi
 import com.android.boilerplate.model.data.remote.request.UsersRequest
+import dagger.hilt.android.scopes.ActivityScoped
+import javax.inject.Inject
 
 /**
  * @author Abdul Rahman
  */
-class UsersRepositoryImp(private val local: Database, private val remote: RemoteApi) :
+@ActivityScoped
+class UsersRepositoryImp @Inject constructor(
+    private val local: Database,
+    private val remote: RemoteApi
+) :
     UsersRepository {
 
     override suspend fun getUsers(request: UsersRequest?): List<User>? {

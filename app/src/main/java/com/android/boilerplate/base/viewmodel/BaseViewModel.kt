@@ -2,48 +2,41 @@ package com.android.boilerplate.base.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.CoroutineExceptionHandler
 import retrofit2.HttpException
-import java.lang.Exception
-import java.lang.RuntimeException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.util.concurrent.TimeoutException
-import kotlin.coroutines.CoroutineContext
 
 /**
  * @author Abdul Rahman
  */
 open class BaseViewModel : ViewModel() {
 
-    val loader = MutableLiveData<Boolean>()
     val error = MutableLiveData<String>()
+    val loader = MutableLiveData<Boolean>()
 
-    fun loaderVisibility(visibility: Boolean) {
-        loader.postValue(visibility)
-    }
-
-    fun showError(e: String) {
+    private fun showError(e: String) {
         error.postValue(e)
     }
 
+    fun showLoader(show: Boolean) {
+        loader.postValue(show)
+    }
+
     fun handleException(exception: Exception) {
-        loaderVisibility(false)
+        showLoader(false)
         when (exception) {
-            is TimeoutException -> {
-
-            }
-            is SocketTimeoutException -> {
-
+            is TimeoutException, is SocketTimeoutException -> {
+                showError(exception.toString())
             }
             is UnknownHostException -> {
-
+                showError(exception.toString())
             }
             is HttpException -> {
-
+                showError(exception.toString())
             }
             else -> {
-
+                showError(exception.toString())
             }
         }
     }

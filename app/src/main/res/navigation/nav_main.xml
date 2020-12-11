@@ -7,7 +7,16 @@
 
     <fragment
         android:id="@+id/dest_users"
-        android:label="@string/random_users"
         android:name="com.android.boilerplate.view.main.users.UsersFragment"
-        tools:layout="@layout/fragment_users" />
+        android:label="@string/random_users"
+        tools:layout="@layout/fragment_users">
+        <action
+            android:id="@+id/action_dest_users_to_dest_user_detail"
+            app:destination="@id/dest_user_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_user_detail"
+        android:name="com.android.boilerplate.view.main.users.UserDetailFragment"
+        android:label="@string/user_detail"
+        tools:layout="@layout/fragment_user_detail" />
 </navigation>

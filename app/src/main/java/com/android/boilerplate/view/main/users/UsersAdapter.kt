@@ -13,7 +13,11 @@ import com.android.boilerplate.model.data.local.database.entities.User
 /**
  * @author Abdul Rahman
  */
-class UsersAdapter(private val context: Context) : RecyclerView.Adapter<UsersAdapter.ViewHolder>() {
+class UsersAdapter(
+    private val context: Context,
+    private val listener: ((user: User) -> Unit)? = null
+) :
+    RecyclerView.Adapter<UsersAdapter.ViewHolder>() {
 
     private var items: List<User>? = null
     private val inflater by lazy {
@@ -51,6 +55,12 @@ class UsersAdapter(private val context: Context) : RecyclerView.Adapter<UsersAda
                 tvEmail.text = user.email
                 tvGender.text = user.gender
                 tvPhone.text = user.phone
+
+                itemView.setOnClickListener {
+                    listener?.let {
+                        it(user)
+                    }
+                }
             }
         }
     }

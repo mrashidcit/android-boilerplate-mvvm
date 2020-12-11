@@ -1,10 +1,10 @@
 package com.android.boilerplate.view.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import com.android.boilerplate.R
 import com.android.boilerplate.view.main.MainActivity

@@ -11,6 +11,9 @@ plugins {
 
     // used for navigation safe args
     id 'androidx.navigation.safeargs.kotlin'
+
+    // used for dependency injection
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -32,13 +35,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled true
+
+    buildFeatures {
+        dataBinding true
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -76,6 +82,14 @@ dependencies {
     implementation "androidx.room:room-runtime:$rootProject.ext.room_version"
     implementation "androidx.room:room-ktx:$rootProject.ext.room_version"
     kapt "androidx.room:room-compiler:$rootProject.ext.room_version"
+
+    // hilt: JetPack integrations
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$rootProject.ext.hilt_lifecycle_version"
+    kapt "androidx.hilt:hilt-compiler:$rootProject.ext.hilt_lifecycle_version"
+
+    // hilt: dependency injection
+    implementation "com.google.dagger:hilt-android:$rootProject.ext.hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$rootProject.ext.hilt_version"
 
     // sms retriever api: sms otp verification apis
     implementation "com.google.android.gms:play-services-base:$rootProject.ext.sms_verification_version"
