@@ -56,10 +56,7 @@ class UsersFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
                     setupUsersAdapters(it)
                 }
             })
-            val users = viewModel.getUsers()
-            if(users != null){
-                setupUsersAdapters(users)
-            }
+            viewModel.getUsers()
         }
     }
 

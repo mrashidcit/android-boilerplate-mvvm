@@ -1,6 +1,8 @@
 package com.android.boilerplate.model.repository.users
 
+import androidx.lifecycle.LiveData
 import com.android.boilerplate.model.data.local.database.Database
+import com.android.boilerplate.model.data.local.database.daos.UserDao
 import com.android.boilerplate.model.data.local.database.entities.User
 import com.android.boilerplate.model.data.remote.RemoteApi
 import com.android.boilerplate.model.data.remote.request.UsersRequest
@@ -12,32 +14,35 @@ import javax.inject.Inject
  */
 @ActivityScoped
 class UsersRepositoryImp @Inject constructor(
-    private val local: Database,
+    private val userDao: UserDao,
     private val remote: RemoteApi
-) :
-    UsersRepository {
+) : UsersRepository {
 
-    override suspend fun getUsers(request: UsersRequest?): List<User>? {
-        var users = local.userDao().getAll()
-        if (users.isEmpty()) {
-            val response = remote.getUsers(request?.results)
-            response.body()?.results?.let {
-                local.userDao().insert(it)
-                users = it
-            }
-        }
+    private var users = userDao.getUsersLiveData()
+
+    override fun getUsersLiveData(): LiveData<List<User>> {
         return users
     }
 
-    override suspend fun getLatestUsers(request: UsersRequest?): List<User>? {
-        val response = remote.getUsers(request?.results)
-        response.body()?.results?.let {
-            // delete the previously cached users
-            local.userDao().delete(local.userDao().getAll())
-            // insert the latest users
-            local.userDao().insert(it)
-            return it
+    override suspend fun getUsers(request: UsersRequest) {
+        val users = userDao.getUsers()
+        if (users.isEmpty()) {
+            val response = remote.getUsers(request.results)
+            response.body()?.results?.let {
+                userDao.insert(it)
+            }
         }
-        return null
+    }
+
+    override suspend fun getLatestUsers(request: UsersRequest) {
+        val response = remote.getUsers(request.results)
+        response.body()?.results?.let {
+            // delete the cached users
+            users.value?.let { cachedUsers ->
+                userDao.delete(cachedUsers)
+            }
+            // insert the latest users
+            userDao.insert(it)
+        }
     }
 }

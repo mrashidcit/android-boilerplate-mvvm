@@ -1,6 +1,7 @@
 package com.android.boilerplate.viewmodel
 
 import androidx.hilt.lifecycle.ViewModelInject
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.android.boilerplate.base.viewmodel.BaseViewModel
@@ -16,37 +17,26 @@ import kotlinx.coroutines.launch
 class UsersViewModel @ViewModelInject constructor(private val repository: UsersRepository) :
     BaseViewModel() {
 
-    val users = MutableLiveData<List<User>>()
+    val users = repository.getUsersLiveData()
 
-    fun getUsers(): List<User>? {
-        if (users.value?.isNotEmpty() == true) {
-            return users.value
-        } else {
-            viewModelScope.launch(Dispatchers.IO) {
-                try {
-                    showLoader(true)
-                    val response = repository.getUsers(UsersRequest(10))
-                    showLoader(false)
-                    response?.let {
-                        users.postValue(it)
-                    }
-                } catch (exception: Exception) {
-                    handleException(exception)
-                }
+    fun getUsers() {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                showLoader(true)
+                repository.getUsers(UsersRequest(10))
+                showLoader(false)
+            } catch (exception: Exception) {
+                handleException(exception)
             }
         }
-        return null
     }
 
     fun getLatestUsers() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 showLoader(true)
-                val response = repository.getLatestUsers(UsersRequest(10))
+                repository.getLatestUsers(UsersRequest(10))
                 showLoader(false)
-                response?.let {
-                    users.postValue(it)
-                }
             } catch (exception: Exception) {
                 handleException(exception)
             }

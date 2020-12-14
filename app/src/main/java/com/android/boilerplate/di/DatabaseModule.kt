@@ -3,6 +3,7 @@ package com.android.boilerplate.di
 import android.content.Context
 import androidx.room.Room
 import com.android.boilerplate.model.data.local.database.Database
+import com.android.boilerplate.model.data.local.database.daos.UserDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,4 +27,7 @@ class DatabaseModule {
             "db-boilerplate"
         ).build()
     }
+
+    @Provides
+    fun provideUserDao(database: Database): UserDao = database.userDao()
 }
