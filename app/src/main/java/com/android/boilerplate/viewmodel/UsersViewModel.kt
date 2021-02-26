@@ -1,11 +1,8 @@
 package com.android.boilerplate.viewmodel
 
 import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.android.boilerplate.base.viewmodel.BaseViewModel
-import com.android.boilerplate.model.data.local.database.entities.User
 import com.android.boilerplate.model.data.remote.request.UsersRequest
 import com.android.boilerplate.model.repository.users.UsersRepository
 import kotlinx.coroutines.Dispatchers

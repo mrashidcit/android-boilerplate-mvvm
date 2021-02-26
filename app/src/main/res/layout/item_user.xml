@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="user"
+            type="com.android.boilerplate.model.data.local.database.entities.User" />
+    </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -10,9 +17,9 @@
         android:layout_marginTop="@dimen/sdp_6"
         android:layout_marginEnd="@dimen/sdp_13"
         android:layout_marginBottom="@dimen/sdp_6"
-        android:foreground="?selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
+        android:foreground="?selectableItemBackground"
         app:cardBackgroundColor="@color/white_FFFFFF"
         app:cardCornerRadius="@dimen/sdp_8"
         app:cardElevation="@dimen/sdp_8"
@@ -38,6 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_marginStart="@dimen/sdp_13"
                 android:layout_marginEnd="@dimen/sdp_8"
+                android:text="@{user.name.title + ' ' + user.name.first + ' ' + user.name.last}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/iv_picture"
                 app:layout_constraintTop_toTopOf="parent"
@@ -47,6 +55,7 @@
                 android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{user.email}"
                 app:layout_constraintStart_toStartOf="@id/tv_name"
                 app:layout_constraintTop_toBottomOf="@id/tv_name"
                 tools:text="abdulrahman9t4@gmail.com" />
@@ -55,6 +64,7 @@
                 android:id="@+id/tv_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{user.gender}"
                 app:layout_constraintStart_toStartOf="@id/tv_name"
                 app:layout_constraintTop_toBottomOf="@id/tv_email"
                 tools:text="Male" />
@@ -64,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/sdp_8"
+                android:text="@{user.phone}"
                 app:layout_constraintStart_toEndOf="@id/tv_gender"
                 app:layout_constraintTop_toTopOf="@id/tv_gender"
                 tools:text="(713)-284-3890" />

@@ -1,7 +1,6 @@
 package com.android.boilerplate.model.repository.users
 
 import androidx.lifecycle.LiveData
-import com.android.boilerplate.model.data.local.database.Database
 import com.android.boilerplate.model.data.local.database.daos.UserDao
 import com.android.boilerplate.model.data.local.database.entities.User
 import com.android.boilerplate.model.data.remote.RemoteApi

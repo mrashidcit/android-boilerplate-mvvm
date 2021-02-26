@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.android.boilerplate.R
@@ -50,12 +51,12 @@ class UsersFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         super.onActivityCreated(savedInstanceState)
         binding.apply {
             swipeRefreshLayout.setOnRefreshListener(this@UsersFragment)
-            viewModel.users.observe(viewLifecycleOwner, {
-                it?.let {
+            viewModel.users.observe(viewLifecycleOwner) {
+                it.let {
                     swipeRefreshLayout.isRefreshing = false
                     setupUsersAdapters(it)
                 }
-            })
+            }
             viewModel.getUsers()
         }
     }
@@ -74,7 +75,7 @@ class UsersFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         }
         binding.apply {
             rvUsers.adapter = adapter
-            adapter.updateItems(users)
+            adapter.submitList(users)
         }
     }
 }

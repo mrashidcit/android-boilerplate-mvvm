@@ -1,12 +1,11 @@
 package com.android.boilerplate.view.main.users
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.DiffUtil
 import com.android.boilerplate.R
+import com.android.boilerplate.base.view.BaseAdapter
+import com.android.boilerplate.base.view.BaseViewHolder
 import com.android.boilerplate.databinding.ItemUserBinding
 import com.android.boilerplate.model.data.local.database.entities.User
 
@@ -16,52 +15,44 @@ import com.android.boilerplate.model.data.local.database.entities.User
 class UsersAdapter(
     private val context: Context,
     private val listener: ((user: User) -> Unit)? = null
-) :
-    RecyclerView.Adapter<UsersAdapter.ViewHolder>() {
+) : BaseAdapter<ItemUserBinding, User, UsersAdapter.UserViewHolder>(UserDiffCallback()) {
 
-    private var items: List<User>? = null
-    private val inflater by lazy {
-        LayoutInflater.from(context)
+    override fun getInflater(): LayoutInflater {
+        return LayoutInflater.from(context)
     }
 
-    fun updateItems(items: List<User>) {
-        this.items = items
-        notifyDataSetChanged()
+    override fun getLayoutId(): Int {
+        return R.layout.item_user
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
-            DataBindingUtil.inflate(
-                inflater, R.layout.item_user, parent, false
-            )
-        )
+    override fun createViewHolder(binding: ItemUserBinding): BaseViewHolder<ItemUserBinding> {
+        return UserViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        items?.let {
-            holder.bind(it[position])
-        }
-    }
+    inner class UserViewHolder(private val binding: ItemUserBinding) :
+        BaseViewHolder<ItemUserBinding>(binding) {
 
-    override fun getItemCount(): Int = items?.size ?: 0
-
-    inner class ViewHolder(private val binding: ItemUserBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-        @SuppressLint("SetTextI18n")
-        fun bind(user: User) {
+        override fun bind(position: Int) {
             binding.apply {
-                tvName.text = user.name?.title + ' ' + user.name?.first + ' ' + user.name?.last
-                tvEmail.text = user.email
-                tvGender.text = user.gender
-                tvPhone.text = user.phone
-
+                val userToBind = getItem(position)
+                user = userToBind
+                executePendingBindings()
                 itemView.setOnClickListener {
                     listener?.let {
-                        it(user)
+                        it(userToBind)
                     }
                 }
             }
+        }
+    }
+
+    private class UserDiffCallback : DiffUtil.ItemCallback<User>() {
+        override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+            return oldItem.id == newItem.id
+        }
+
+        override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
+            return oldItem == newItem
         }
     }
 }
