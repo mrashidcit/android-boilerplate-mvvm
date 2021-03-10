@@ -1,9 +1,7 @@
 package com.android.boilerplate.view.main.users
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
@@ -29,6 +27,16 @@ class UsersFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
     private val viewModel: UsersViewModel by viewModels()
 
     override fun getViewModel(): BaseViewModel = viewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_main, menu)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -59,6 +67,20 @@ class UsersFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
             }
             viewModel.getUsers()
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_settings -> {
+                findNavController().navigate(
+                    UsersFragmentDirections.actionDestUsersToDestSettings()
+                )
+            }
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
+        }
+        return true
     }
 
     override fun onRefresh() {

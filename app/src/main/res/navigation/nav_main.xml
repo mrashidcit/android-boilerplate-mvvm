@@ -13,10 +13,27 @@
         <action
             android:id="@+id/action_dest_users_to_dest_user_detail"
             app:destination="@id/dest_user_detail" />
+        <action
+            android:id="@+id/action_dest_users_to_dest_settings"
+            app:destination="@id/dest_settings" />
     </fragment>
     <fragment
         android:id="@+id/dest_user_detail"
         android:name="com.android.boilerplate.view.main.users.UserDetailFragment"
         android:label="@string/user_detail"
         tools:layout="@layout/fragment_user_detail" />
+    <fragment
+        android:id="@+id/dest_settings"
+        android:name="com.android.boilerplate.view.main.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_dest_settings_to_languagesFragment"
+            app:destination="@id/dest_languages" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_languages"
+        android:name="com.android.boilerplate.view.main.settings.language.LanguagesFragment"
+        android:label="@string/languages"
+        tools:layout="@layout/fragment_languages" />
 </navigation>
