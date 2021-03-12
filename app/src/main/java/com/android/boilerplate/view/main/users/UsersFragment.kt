@@ -12,7 +12,7 @@ import com.android.boilerplate.base.view.BaseFragment
 import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.databinding.FragmentUsersBinding
 import com.android.boilerplate.model.data.local.database.entities.User
-import com.android.boilerplate.viewmodel.UsersViewModel
+import com.android.boilerplate.viewmodel.main.users.UsersViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

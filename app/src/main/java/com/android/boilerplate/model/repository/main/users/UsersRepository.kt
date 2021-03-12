@@ -1,4 +1,4 @@
-package com.android.boilerplate.model.repository.users
+package com.android.boilerplate.model.repository.main.users
 
 import androidx.lifecycle.LiveData
 import com.android.boilerplate.model.data.local.database.entities.User

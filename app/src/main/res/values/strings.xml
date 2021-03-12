@@ -10,5 +10,6 @@
 
     <string name="random_users">Random Users</string>
     <string name="user_detail">User Detail</string>
+    <string name="language">Language</string>
 
 </resources>

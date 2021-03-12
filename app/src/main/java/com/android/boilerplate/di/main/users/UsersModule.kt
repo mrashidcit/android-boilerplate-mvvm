@@ -1,7 +1,7 @@
-package com.android.boilerplate.di.users
+package com.android.boilerplate.di.main.users
 
-import com.android.boilerplate.model.repository.users.UsersRepository
-import com.android.boilerplate.model.repository.users.UsersRepositoryImp
+import com.android.boilerplate.model.repository.main.users.UsersRepository
+import com.android.boilerplate.model.repository.main.users.UsersRepositoryImp
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -17,5 +17,6 @@ abstract class UsersModule {
 
     @ActivityScoped
     @Binds
-    abstract fun bindUsersRepository(usersRepositoryImp: UsersRepositoryImp): UsersRepository
+    abstract fun bindUsersRepository(usersRepositoryImp: UsersRepositoryImp)
+            : UsersRepository
 }

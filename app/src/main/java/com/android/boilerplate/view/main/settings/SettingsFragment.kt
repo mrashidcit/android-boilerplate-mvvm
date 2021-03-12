@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.android.boilerplate.R
 import com.android.boilerplate.base.view.BaseFragment
 import com.android.boilerplate.base.viewmodel.BaseViewModel
@@ -33,11 +34,18 @@ class SettingsFragment : BaseFragment() {
                 container,
                 false
             )
+            binding.listener = this
         }
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+    }
+
+    fun onLanguageClicked() {
+        findNavController().navigate(
+            SettingsFragmentDirections.actionDestSettingsToLanguagesFragment()
+        )
     }
 }

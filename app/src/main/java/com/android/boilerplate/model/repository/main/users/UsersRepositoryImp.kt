@@ -1,4 +1,4 @@
-package com.android.boilerplate.model.repository.users
+package com.android.boilerplate.model.repository.main.users
 
 import androidx.lifecycle.LiveData
 import com.android.boilerplate.model.data.local.database.daos.UserDao
@@ -19,9 +19,7 @@ class UsersRepositoryImp @Inject constructor(
 
     private var users = userDao.getUsersLiveData()
 
-    override fun getUsersLiveData(): LiveData<List<User>> {
-        return users
-    }
+    override fun getUsersLiveData(): LiveData<List<User>> = users
 
     override suspend fun getUsers(request: UsersRequest) {
         val users = userDao.getUsers()

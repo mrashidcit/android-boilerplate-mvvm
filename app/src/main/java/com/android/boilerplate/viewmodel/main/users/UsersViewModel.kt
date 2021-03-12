@@ -1,10 +1,10 @@
-package com.android.boilerplate.viewmodel
+package com.android.boilerplate.viewmodel.main.users
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.viewModelScope
 import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.model.data.remote.request.UsersRequest
-import com.android.boilerplate.model.repository.users.UsersRepository
+import com.android.boilerplate.model.repository.main.users.UsersRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

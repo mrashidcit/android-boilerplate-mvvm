@@ -5,19 +5,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import com.android.boilerplate.R
 import com.android.boilerplate.base.view.BaseFragment
 import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.databinding.FragmentLanguagesBinding
+import com.android.boilerplate.model.data.aide.Language
+import com.android.boilerplate.viewmodel.main.settings.SettingsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * @author Abdul Rahman
  */
+@AndroidEntryPoint
 class LanguagesFragment : BaseFragment() {
 
+    private lateinit var adapter: LanguagesAdapter
     private lateinit var binding: FragmentLanguagesBinding
 
-    override fun getViewModel(): BaseViewModel? = null
+    private val viewModel: SettingsViewModel by viewModels()
+
+    override fun getViewModel(): BaseViewModel = viewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,5 +47,22 @@ class LanguagesFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        binding.apply {
+            viewModel.languages.observe(viewLifecycleOwner) {
+                setupLanguagesAdapters(it)
+            }
+            viewModel.getLanguages()
+        }
+    }
+
+    private fun setupLanguagesAdapters(languages: List<Language>) {
+        if (!::adapter.isInitialized) {
+            adapter = LanguagesAdapter(requireContext()) {
+            }
+        }
+        binding.apply {
+            rvLanguages.adapter = adapter
+            adapter.submitList(languages)
+        }
     }
 }
