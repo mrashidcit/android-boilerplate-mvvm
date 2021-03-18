@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="random_users">Utilizatori aleatori</string>
+    <string name="user_detail">Detalii utilizator</string>
+    <string name="settings">Setări</string>
+    <string name="language">Limba</string>
+    <string name="languages">Limbi</string>
+    <string name="session_expired">Sesiunea a expirat!</string>
+    <string name="no_internet_connectivity">Fără conectivitate la internet!</string>
+    <string name="please_confirm">Vă rugăm să confirmați</string>
+    <string name="okay">bine</string>
+    <string name="cancel">Anulare</string>
+    <string name="theme">Temă</string>
+    <string name="dark">Întuneric</string>
+    <string name="light">Ușoară</string>
+    <string name="system_default">Defectiune de sistem</string>
+</resources>

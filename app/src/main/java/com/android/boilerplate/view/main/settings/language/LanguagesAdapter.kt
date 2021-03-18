@@ -7,9 +7,7 @@ import com.android.boilerplate.R
 import com.android.boilerplate.base.view.BaseAdapter
 import com.android.boilerplate.base.view.BaseViewHolder
 import com.android.boilerplate.databinding.ItemLanguageBinding
-import com.android.boilerplate.databinding.ItemUserBinding
 import com.android.boilerplate.model.data.aide.Language
-import com.android.boilerplate.model.data.local.database.entities.User
 
 /**
  * @author Abdul Rahman

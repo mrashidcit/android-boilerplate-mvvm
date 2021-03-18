@@ -1,6 +1,6 @@
 package com.android.boilerplate.model.repository.main.settings
 
-import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.android.boilerplate.model.data.aide.Language
 
 /**
@@ -8,7 +8,13 @@ import com.android.boilerplate.model.data.aide.Language
  */
 interface SettingsRepository {
 
-    fun getLanguagesLiveData(): LiveData<List<Language>>
+    fun getLanguagesLiveData(): MutableLiveData<List<Language>>
 
     suspend fun getLanguages()
+
+    fun getSelectedLanguageName(): String
+
+    fun isSameLanguageSelected(lang: Language): Boolean
+
+    suspend fun markSelectedLanguage(lang: Language)
 }

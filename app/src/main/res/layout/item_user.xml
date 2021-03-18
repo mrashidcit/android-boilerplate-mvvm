@@ -42,11 +42,10 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_name"
                 style="@style/tv_roboto_light_13_black_000000"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_marginStart="@dimen/sdp_13"
                 android:layout_marginEnd="@dimen/sdp_8"
                 android:text="@{user.name.title + ' ' + user.name.first + ' ' + user.name.last}"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/iv_picture"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Abdul Rahman" />

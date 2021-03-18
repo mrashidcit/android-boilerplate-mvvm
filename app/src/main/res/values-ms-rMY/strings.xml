@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="random_users">Pengguna Rawak</string>
+    <string name="user_detail">Maklumat Pengguna</string>
+    <string name="settings">Tetapan</string>
+    <string name="language">Bahasa</string>
+    <string name="languages">Bahasa</string>
+    <string name="session_expired">Sesi tamat!</string>
+    <string name="no_internet_connectivity">Tiada sambungan internet!</string>
+    <string name="please_confirm">Tolong sahkan</string>
+    <string name="okay">baik</string>
+    <string name="cancel">Batal</string>
+    <string name="theme">Tema</string>
+    <string name="dark">Gelap</string>
+    <string name="light">Cahaya</string>
+    <string name="system_default">Lalai sistem</string>
+</resources>

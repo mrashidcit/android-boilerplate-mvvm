@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="random_users">مستخدمين عشوائيين</string>
+    <string name="user_detail">تفاصيل المستخدم</string>
+    <string name="settings">إعدادات</string>
+    <string name="language">لغة</string>
+    <string name="languages">اللغات</string>
+    <string name="session_expired">انتهت الجلسة!</string>
+    <string name="no_internet_connectivity">لا يوجد اتصال بالإنترنت!</string>
+    <string name="please_confirm">يرجى تأكيد</string>
+    <string name="okay">تمام</string>
+    <string name="cancel">يلغي</string>
+    <string name="theme">سمة</string>
+    <string name="dark">داكن</string>
+    <string name="light">خفيفة</string>
+    <string name="system_default">خفيفة</string>
+</resources>

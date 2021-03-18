@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="random_users">Utilisateurs aléatoires</string>
+    <string name="user_detail">Détails de l\'utilisateur</string>
+    <string name="settings">Réglages</string>
+    <string name="language">Langue</string>
+    <string name="languages">Langues</string>
+    <string name="session_expired">La session a expiré!</string>
+    <string name="no_internet_connectivity">Pas de connectivité Internet!</string>
+    <string name="please_confirm">Veuillez confirmer</string>
+    <string name="okay">D\'accord</string>
+    <string name="cancel">Annuler</string>
+    <string name="theme">Thème</string>
+    <string name="dark">Foncé</string>
+    <string name="light">Lumière</string>
+    <string name="system_default">Défaut du système</string>
+</resources>

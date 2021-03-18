@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="random_users">Rastgele Kullanıcılar</string>
+    <string name="user_detail">Kullanıcı Ayrıntısı</string>
+    <string name="settings">Ayarlar</string>
+    <string name="language">Dil</string>
+    <string name="languages">Diller</string>
+    <string name="session_expired">Oturum süresi doldu!</string>
+    <string name="no_internet_connectivity">İnternet bağlantısı yok!</string>
+    <string name="please_confirm">Lütfen onaylayın</string>
+    <string name="okay">Tamam</string>
+    <string name="cancel">İptal etmek</string>
+    <string name="theme">Tema</string>
+    <string name="dark">Karanlık</string>
+    <string name="light">Işık</string>
+    <string name="system_default">Sistem varsayılanı</string>
+</resources>

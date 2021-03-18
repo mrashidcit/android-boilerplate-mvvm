@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="random_users">Willekeurige gebruikers</string>
+    <string name="user_detail">Gebruikersdetail</string>
+    <string name="settings">Instellingen</string>
+    <string name="language">Taal</string>
+    <string name="languages">Talen</string>
+    <string name="session_expired">Sessie verlopen!</string>
+    <string name="no_internet_connectivity">Geen internetverbinding!</string>
+    <string name="please_confirm">Bevestig alstublieft</string>
+    <string name="okay">Oke</string>
+    <string name="cancel">annuleren</string>
+    <string name="theme">Thema</string>
+    <string name="dark">Donker</string>
+    <string name="light">Licht</string>
+    <string name="system_default">Systeemfout</string>
+</resources>

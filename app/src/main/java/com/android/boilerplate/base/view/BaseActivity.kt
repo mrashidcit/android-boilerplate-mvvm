@@ -3,6 +3,8 @@ package com.android.boilerplate.base.view
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
+import android.content.SharedPreferences
+import android.content.res.Configuration
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
@@ -12,9 +14,16 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.android.boilerplate.R
 import com.android.boilerplate.aide.utils.DialogUtils
 import com.android.boilerplate.base.viewmodel.BaseViewModel
+import com.android.boilerplate.model.data.local.preference.Preferences
+import dagger.hilt.EntryPoint
+import dagger.hilt.InstallIn
+import dagger.hilt.android.EntryPointAccessors
+import dagger.hilt.components.SingletonComponent
+import java.util.*
 
 /**
  * @author Abdul Rahman
@@ -31,6 +40,24 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
     abstract fun getViewModel(): BaseViewModel?
 
     abstract fun hasConnectivity(connectivity: Boolean)
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(newBase)
+        applyOverrideConfiguration(Configuration(newBase?.resources?.configuration))
+    }
+
+    override fun applyOverrideConfiguration(overrideConfiguration: Configuration?) {
+        val sharedPreferences = getSharedPreferences(
+            applicationInfo.loadLabel(packageManager).toString(),
+            Context.MODE_PRIVATE
+        )
+        sharedPreferences.getString(Preferences.KEY_LANG, Preferences.KEY_DEFAULT)?.let {
+            if (it != Preferences.KEY_DEFAULT) {
+                overrideConfiguration?.setLocale(Locale(it))
+            }
+        }
+        super.applyOverrideConfiguration(overrideConfiguration)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

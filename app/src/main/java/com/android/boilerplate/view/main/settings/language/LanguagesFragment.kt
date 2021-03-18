@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.observe
 import com.android.boilerplate.R
 import com.android.boilerplate.base.view.BaseFragment
 import com.android.boilerplate.base.viewmodel.BaseViewModel
@@ -49,7 +48,7 @@ class LanguagesFragment : BaseFragment() {
         super.onActivityCreated(savedInstanceState)
         binding.apply {
             viewModel.languages.observe(viewLifecycleOwner) {
-                setupLanguagesAdapters(it)
+                it?.let { setupLanguagesAdapters(it) }
             }
             viewModel.getLanguages()
         }
@@ -58,6 +57,10 @@ class LanguagesFragment : BaseFragment() {
     private fun setupLanguagesAdapters(languages: List<Language>) {
         if (!::adapter.isInitialized) {
             adapter = LanguagesAdapter(requireContext()) {
+                if(!viewModel.isSameLanguageSelected(it)) {
+                    viewModel.markSelectedLanguage(it)
+                    activity?.recreate()
+                }
             }
         }
         binding.apply {

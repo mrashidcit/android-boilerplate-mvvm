@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="random_users">کاربران تصادفی</string>
+    <string name="user_detail">جزئیات کاربر</string>
+    <string name="settings">تنظیمات</string>
+    <string name="language">زبان</string>
+    <string name="languages">زبان ها</string>
+    <string name="session_expired">جلسه تمام شده!</string>
+    <string name="no_internet_connectivity">بدون اتصال به اینترنت!</string>
+    <string name="please_confirm">لطفا تأیید کنید</string>
+    <string name="okay">باشه</string>
+    <string name="cancel">لغو</string>
+    <string name="theme">موضوع</string>
+    <string name="dark">تاریک</string>
+    <string name="light">سبک</string>
+    <string name="system_default">پیش فرض سیستم</string>
+</resources>
