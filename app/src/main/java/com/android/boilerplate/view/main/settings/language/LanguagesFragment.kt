@@ -58,7 +58,7 @@ class LanguagesFragment : BaseFragment() {
         if (!::adapter.isInitialized) {
             adapter = LanguagesAdapter(requireContext()) {
                 if(!viewModel.isSameLanguageSelected(it)) {
-                    viewModel.markSelectedLanguage(it)
+                    viewModel.setLanguage(it)
                     activity?.recreate()
                 }
             }

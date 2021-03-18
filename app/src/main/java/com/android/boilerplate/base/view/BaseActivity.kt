@@ -3,7 +3,6 @@ package com.android.boilerplate.base.view
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
-import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.net.ConnectivityManager
 import android.net.Network
@@ -19,10 +18,6 @@ import com.android.boilerplate.R
 import com.android.boilerplate.aide.utils.DialogUtils
 import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.model.data.local.preference.Preferences
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
-import dagger.hilt.android.EntryPointAccessors
-import dagger.hilt.components.SingletonComponent
 import java.util.*
 
 /**
@@ -41,21 +36,34 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
 
     abstract fun hasConnectivity(connectivity: Boolean)
 
+    /**
+     * @param newBase the default base context of the application
+     * @return overridden configuration with user's selected night mode and language preferences
+     */
+    private fun getOverrideConfiguration(newBase: Context?): Configuration {
+        val configuration = Configuration(newBase?.resources?.configuration)
+        val appName = applicationInfo.loadLabel(packageManager).toString()
+        val sharedPreferences = getSharedPreferences(appName, Context.MODE_PRIVATE)
+        val uiMode = sharedPreferences.getInt(
+            Preferences.KEY_THEME, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+        )
+        if (uiMode != AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM) {
+            AppCompatDelegate.setDefaultNightMode(uiMode)
+        }
+        sharedPreferences.getString(Preferences.KEY_LANG, Preferences.KEY_DEFAULT)?.let {
+            if (it != Preferences.KEY_DEFAULT) {
+                configuration.setLocale(Locale(it))
+            }
+        }
+        return configuration
+    }
+
     override fun attachBaseContext(newBase: Context?) {
         super.attachBaseContext(newBase)
-        applyOverrideConfiguration(Configuration(newBase?.resources?.configuration))
+        applyOverrideConfiguration(getOverrideConfiguration(newBase))
     }
 
     override fun applyOverrideConfiguration(overrideConfiguration: Configuration?) {
-        val sharedPreferences = getSharedPreferences(
-            applicationInfo.loadLabel(packageManager).toString(),
-            Context.MODE_PRIVATE
-        )
-        sharedPreferences.getString(Preferences.KEY_LANG, Preferences.KEY_DEFAULT)?.let {
-            if (it != Preferences.KEY_DEFAULT) {
-                overrideConfiguration?.setLocale(Locale(it))
-            }
-        }
         super.applyOverrideConfiguration(overrideConfiguration)
     }
 

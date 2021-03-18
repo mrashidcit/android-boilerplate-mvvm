@@ -15,6 +15,16 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_theme_name"
+            style="@style/tv_roboto_light_13_black_000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sdp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/system_default" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_theme"
             style="@style/tv_roboto_light_13_black_000000"
             android:layout_width="0dp"
@@ -30,6 +40,16 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_language_name"
+            style="@style/tv_roboto_light_13_black_000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sdp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_theme"
+            tools:text="@string/system_default" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_language"
             style="@style/tv_roboto_light_13_black_000000"
             android:layout_width="0dp"
@@ -43,16 +63,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_theme" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_language_name"
-            style="@style/tv_roboto_light_13_black_000000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/sdp_12"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_theme"
-            tools:text="@string/system_default" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

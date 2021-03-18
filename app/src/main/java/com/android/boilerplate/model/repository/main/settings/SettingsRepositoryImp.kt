@@ -1,6 +1,7 @@
 package com.android.boilerplate.model.repository.main.settings
 
 import android.content.Context
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.MutableLiveData
 import com.android.boilerplate.R
 import com.android.boilerplate.model.data.aide.Language
@@ -30,6 +31,26 @@ class SettingsRepositoryImp @Inject constructor(
             .use { it.readText() }
         val type = object : TypeToken<List<Language>>() {}.type
         languages.addAll(Gson().fromJson(json, type))
+    }
+
+    override fun getSelectedThemeIndex(): Int {
+        return when (preferences.getInt(Preferences.KEY_THEME)) {
+            AppCompatDelegate.MODE_NIGHT_NO -> 1
+            AppCompatDelegate.MODE_NIGHT_YES -> 2
+            else -> 0
+        }
+    }
+
+    override fun getSelectedThemeName(): String {
+        return when (preferences.getInt(Preferences.KEY_THEME)) {
+            AppCompatDelegate.MODE_NIGHT_NO -> context.getString(R.string.light)
+            AppCompatDelegate.MODE_NIGHT_YES -> context.getString(R.string.dark)
+            else -> context.getString(R.string.system_default)
+        }
+    }
+
+    override fun setTheme(theme: Int) {
+        preferences.setInt(Preferences.KEY_THEME, theme)
     }
 
     override fun getLanguagesLiveData(): MutableLiveData<List<Language>> = languagesLiveData
@@ -78,7 +99,7 @@ class SettingsRepositoryImp @Inject constructor(
         return false
     }
 
-    override suspend fun markSelectedLanguage(lang: Language) {
+    override suspend fun setLanguage(lang: Language) {
         // save the selected language in preferences
         preferences.setString(Preferences.KEY_LANG, lang.lang)
         languagesLiveData.value?.let {

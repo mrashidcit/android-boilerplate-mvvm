@@ -62,6 +62,7 @@ class Preferences @Inject constructor(@ApplicationContext private val context: C
 
     companion object {
         const val KEY_DEFAULT = "default"
+        const val KEY_THEME = "theme"
         const val KEY_LANG = "lang"
     }
 }

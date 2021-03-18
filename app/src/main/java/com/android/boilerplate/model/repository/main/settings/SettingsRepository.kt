@@ -8,6 +8,12 @@ import com.android.boilerplate.model.data.aide.Language
  */
 interface SettingsRepository {
 
+    fun getSelectedThemeIndex(): Int
+
+    fun getSelectedThemeName(): String
+
+    fun setTheme(theme: Int)
+
     fun getLanguagesLiveData(): MutableLiveData<List<Language>>
 
     suspend fun getLanguages()
@@ -16,5 +22,5 @@ interface SettingsRepository {
 
     fun isSameLanguageSelected(lang: Language): Boolean
 
-    suspend fun markSelectedLanguage(lang: Language)
+    suspend fun setLanguage(lang: Language)
 }

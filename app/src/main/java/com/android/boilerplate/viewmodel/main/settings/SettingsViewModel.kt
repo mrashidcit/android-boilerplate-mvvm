@@ -16,6 +16,12 @@ class SettingsViewModel @ViewModelInject constructor(private val repository: Set
 
     val languages = repository.getLanguagesLiveData()
 
+    fun getSelectedThemeIndex(): Int = repository.getSelectedThemeIndex()
+
+    fun getSelectedThemeName(): String = repository.getSelectedThemeName()
+
+    fun setTheme(theme: Int) = repository.setTheme(theme)
+
     fun getLanguages() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
@@ -28,16 +34,14 @@ class SettingsViewModel @ViewModelInject constructor(private val repository: Set
         }
     }
 
-    fun getSelectedLanguageName(): String {
-        return repository.getSelectedLanguageName()
-    }
+    fun getSelectedLanguageName(): String = repository.getSelectedLanguageName()
 
     fun isSameLanguageSelected(lang: Language): Boolean = repository.isSameLanguageSelected(lang)
 
-    fun markSelectedLanguage(lang: Language) {
+    fun setLanguage(lang: Language) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                repository.markSelectedLanguage(lang)
+                repository.setLanguage(lang)
             } catch (exception: Exception) {
                 handleException(exception)
             }
