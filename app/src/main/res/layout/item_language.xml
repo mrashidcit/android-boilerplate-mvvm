@@ -22,6 +22,8 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_language"
+            style="@style/tv_roboto_light_13_black_light_white_dark"
+            android:textSize="@dimen/ssp_11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/sdp_12"

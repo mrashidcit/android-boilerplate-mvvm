@@ -20,7 +20,7 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?selectableItemBackground"
-        app:cardBackgroundColor="@color/white_FFFFFF"
+        app:cardBackgroundColor="@color/white_FFFFFF_black_201E1E"
         app:cardCornerRadius="@dimen/sdp_8"
         app:cardElevation="@dimen/sdp_8"
         app:contentPadding="@dimen/sdp_8">
@@ -39,12 +39,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:placeholder="@{@drawable/ic_person}"
-                app:url="@{user.picture.thumbnail}" />
+                app:url="@{user.picture.medium}" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_name"
-                style="@style/tv_roboto_light_13_black_000000"
-                android:layout_width="wrap_content"
+                style="@style/tv_roboto_light_13_black_light_white_dark"
                 android:layout_marginStart="@dimen/sdp_13"
                 android:layout_marginEnd="@dimen/sdp_8"
                 android:text="@{user.name.title + ' ' + user.name.first + ' ' + user.name.last}"
@@ -54,28 +53,28 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/tv_roboto_light_13_black_light_white_dark"
                 android:text="@{user.email}"
+                android:textSize="@dimen/ssp_11"
                 app:layout_constraintStart_toStartOf="@id/tv_name"
                 app:layout_constraintTop_toBottomOf="@id/tv_name"
                 tools:text="abdulrahman9t4@gmail.com" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/tv_roboto_light_13_black_light_white_dark"
                 android:text="@{user.gender}"
+                android:textSize="@dimen/ssp_11"
                 app:layout_constraintStart_toStartOf="@id/tv_name"
                 app:layout_constraintTop_toBottomOf="@id/tv_email"
                 tools:text="Male" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/tv_roboto_light_13_black_light_white_dark"
                 android:layout_marginStart="@dimen/sdp_8"
                 android:text="@{user.phone}"
+                android:textSize="@dimen/ssp_11"
                 app:layout_constraintStart_toEndOf="@id/tv_gender"
                 app:layout_constraintTop_toTopOf="@id/tv_gender"
                 tools:text="(713)-284-3890" />

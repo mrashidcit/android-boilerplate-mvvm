@@ -7,9 +7,15 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import com.android.boilerplate.R
+import com.android.boilerplate.base.view.BaseActivity
+import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.view.main.MainActivity
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
+
+    override fun getViewModel(): BaseViewModel? = null
+
+    override fun hasConnectivity(connectivity: Boolean) {}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

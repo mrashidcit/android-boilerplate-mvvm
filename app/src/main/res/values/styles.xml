@@ -2,11 +2,11 @@
 <resources>
 
     <!-- AppCompatTextView styles - - - - - -->
-    <style name="tv_roboto_light_13_black_000000" parent="Widget.AppCompat.TextView">
+    <style name="tv_roboto_light_13_black_light_white_dark" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/roboto_light</item>
-        <item name="android:textColor">@color/black_000000</item>
+        <item name="android:textColor">@color/black_201E1E_white_FFFFFF</item>
         <item name="android:textSize">@dimen/ssp_13</item>
     </style>
     <!-- - - - - - -->

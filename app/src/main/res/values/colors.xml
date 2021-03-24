@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="white_FFFFFF_black_201E1E">#FFFFFF</color>
+    <color name="white_FFFFFF_black_333030">#FFFFFF</color>
+    <color name="black_201E1E_white_FFFFFF">#201E1E</color>
+
+    <color name="purple_FF6200EE_black_201E1E">#FF6200EE</color>
+    <color name="purple_FF3700B3_black_000000">#FF3700B3</color>
+
     <color name="purple_FFBB86FC">#FFBB86FC</color>
     <color name="purple_FF6200EE">#FF6200EE</color>
     <color name="purple_FF3700B3">#FF3700B3</color>

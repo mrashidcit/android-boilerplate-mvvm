@@ -4,15 +4,15 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@color/black_000000</item>
-        <item name="android:navigationBarColor">@color/black_000000</item>
+        <item name="android:windowBackground">@color/white_FFFFFF_black_333030</item>
+        <item name="android:navigationBarColor">@color/white_FFFFFF_black_333030</item>
     </style>
 
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_FFBB86FC</item>
-        <item name="colorPrimaryVariant">@color/purple_FF3700B3</item>
-        <item name="colorOnPrimary">@color/black_000000</item>
+        <item name="colorPrimary">@color/purple_FF6200EE_black_201E1E</item>
+        <item name="colorPrimaryVariant">@color/purple_FF3700B3_black_000000</item>
+        <item name="colorOnPrimary">@color/white_FFFFFF_black_201E1E</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_FF03DAC5</item>
         <item name="colorSecondaryVariant">@color/teal_FF03DAC5</item>
