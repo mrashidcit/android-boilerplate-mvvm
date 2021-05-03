@@ -2,10 +2,10 @@
 <resources>
 
     <color name="white_FFFFFF_black_201E1E">#201E1E</color>
-    <color name="white_FFFFFF_black_333030">#101010</color>
+    <color name="white_FFFFFF_black_101010">#101010</color>
     <color name="black_201E1E_white_FFFFFF">#FFFFFF</color>
 
-    <color name="purple_FF6200EE_black_201E1E">#201E1E</color>
-    <color name="purple_FF3700B3_black_000000">#000000</color>
+    <color name="purple_FF6200EE_black_101010">#101010</color>
+    <color name="purple_FF3700B3_black_101010">#101010</color>
 
 </resources>
