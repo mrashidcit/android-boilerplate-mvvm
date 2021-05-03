@@ -47,9 +47,7 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         val uiMode = sharedPreferences.getInt(
             Preferences.KEY_THEME, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
         )
-        if (uiMode != AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM) {
-            AppCompatDelegate.setDefaultNightMode(uiMode)
-        }
+        AppCompatDelegate.setDefaultNightMode(uiMode)
         sharedPreferences.getString(Preferences.KEY_LANG, Preferences.KEY_DEFAULT)?.let {
             if (it != Preferences.KEY_DEFAULT) {
                 configuration.setLocale(Locale(it))
