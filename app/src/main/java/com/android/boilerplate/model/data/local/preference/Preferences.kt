@@ -20,6 +20,8 @@ class Preferences @Inject constructor(@ApplicationContext private val context: C
         sharedPreferences.edit().clear().apply()
     }
 
+    fun contains(key: String): Boolean = sharedPreferences.contains(key)
+
     fun setString(key: String, value: String?) {
         sharedPreferences.edit().putString(key, value).apply()
     }
@@ -62,6 +64,7 @@ class Preferences @Inject constructor(@ApplicationContext private val context: C
 
     companion object {
         const val KEY_DEFAULT = "default"
+        const val KEY_NOTIFICATION = "notification"
         const val KEY_THEME = "theme"
         const val KEY_LANG = "lang"
     }

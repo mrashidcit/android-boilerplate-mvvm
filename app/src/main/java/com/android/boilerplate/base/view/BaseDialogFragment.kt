@@ -2,6 +2,7 @@ package com.android.boilerplate.base.view
 
 import android.content.Context
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.DialogFragment
@@ -20,8 +21,8 @@ abstract class BaseDialogFragment : DialogFragment(), BaseView {
         }
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         hideKeyboard()
     }
 

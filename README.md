@@ -1,1 +1,1 @@
-# android-boilerplate-mvvm
+# device-dashboard

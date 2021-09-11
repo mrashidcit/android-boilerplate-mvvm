@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="random_users">Случайные пользователи</string>
-    <string name="user_detail">Сведения о пользователе</string>
     <string name="settings">Настройки</string>
     <string name="language">Язык</string>
     <string name="languages">Языки</string>
@@ -14,4 +12,26 @@
     <string name="dark">Тьма</string>
     <string name="light">Свет</string>
     <string name="system_default">Системные установки по умолчанию</string>
+    <string name="notification">Уведомление</string>
+    <string name="notification_text">Получите полезную и подробную информацию о вашем устройстве</string>
+    <string name="more">Более</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="share">доля</string>
+    <string name="rate_us">Оцените нас</string>
+    <string name="more_apps">Больше приложений</string>
+    <string name="version">Версия</string>
+    <string name="give_feedback">Дать обратную связь</string>
+    <string name="how_we_can_improve">Как мы можем улучшить?</string>
+    <string name="improve_design">Улучшение дизайна</string>
+    <string name="improve_experience">Улучшение опыта</string>
+    <string name="improve_functionality">Улучшение функциональности</string>
+    <string name="improve_performance">Повышение производительности</string>
+    <string name="briefly_describe_feedback">Кратко опишите отзыв</string>
+    <string name="detailed_feedback">Подробный отзыв:</string>
+    <string name="type_here_">Введите здесь…</string>
+    <string name="submit_feedback">Отправить отзыв</string>
+    <string name="invalid_feedback">Недействительный отзыв!</string>
+    <string name="no_email_app_installed">Не установлены почтовые клиентские приложения</string>
+    <string name="share_message">Привет! Загрузите %1$s, чтобы получить полезную и подробную информацию о вашем устройстве. https://play.google.com/store/apps/details?id=%2$s</string>
 </resources>

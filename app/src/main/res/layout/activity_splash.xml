@@ -7,15 +7,14 @@
     tools:context=".view.splash.SplashActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/logo"
-        style="@style/tv_roboto_light_13_black_light_white_dark"
+        style="@style/tv_poppins_bold_15_black_1D1D1D_white_FFFFFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textSize="@dimen/ssp_17"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/ssp_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

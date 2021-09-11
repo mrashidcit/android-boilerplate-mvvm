@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="random_users">مستخدمين عشوائيين</string>
-    <string name="user_detail">تفاصيل المستخدم</string>
     <string name="settings">إعدادات</string>
     <string name="language">لغة</string>
     <string name="languages">اللغات</string>
@@ -14,4 +12,26 @@
     <string name="dark">داكن</string>
     <string name="light">خفيفة</string>
     <string name="system_default">خفيفة</string>
+    <string name="notification">تنبيه</string>
+    <string name="notification_text">احصل على معلومات مفيدة ومفصلة عن جهازك</string>
+    <string name="more">أكثر</string>
+    <string name="feedback">تعليق</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="share">يشارك</string>
+    <string name="rate_us">قيمنا</string>
+    <string name="more_apps">تطبيقات أكثر</string>
+    <string name="version">إصدار</string>
+    <string name="give_feedback">إعطاء ردود الفعل</string>
+    <string name="how_we_can_improve">كيف يمكننا التحسن؟</string>
+    <string name="improve_design">تحسين التصميم</string>
+    <string name="improve_experience">تحسين التجربة</string>
+    <string name="improve_functionality">تحسين الوظائف</string>
+    <string name="improve_performance">تحسين الأداء</string>
+    <string name="briefly_describe_feedback">صف التعليقات بإيجاز</string>
+    <string name="detailed_feedback">ملاحظات مفصلة:</string>
+    <string name="type_here_">أكتب هنا…</string>
+    <string name="submit_feedback">إرسال ملاحظات</string>
+    <string name="invalid_feedback">ملاحظات غير صحيحة!</string>
+    <string name="no_email_app_installed">لا توجد تطبيقات عميل بريد إلكتروني مثبتة</string>
+    <string name="share_message">مهلا! قم بتنزيل %1$s للحصول على معلومات مفيدة ومفصلة عن جهازك. https://play.google.com/store/apps/details؟id=%2$s</string>
 </resources>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="random_users">무작위 사용자</string>
-    <string name="user_detail">사용자 세부 정보</string>
     <string name="settings">설정</string>
     <string name="language">언어</string>
     <string name="languages">언어</string>
@@ -14,4 +12,26 @@
     <string name="dark">어두운</string>
     <string name="light">빛</string>
     <string name="system_default">시스템 기본값</string>
+    <string name="notification">공고</string>
+    <string name="notification_text">장치에 대한 유용하고 자세한 정보 얻기</string>
+    <string name="more">더</string>
+    <string name="feedback">피드백</string>
+    <string name="privacy_policy">개인 정보 정책</string>
+    <string name="share">공유</string>
+    <string name="rate_us">평가</string>
+    <string name="more_apps">더 많은 애플 리케이션</string>
+    <string name="version">버전</string>
+    <string name="give_feedback">피드백 제공</string>
+    <string name="how_we_can_improve">어떻게 개선할 수 있습니까?</string>
+    <string name="improve_design">디자인 개선</string>
+    <string name="improve_experience">경험 향상</string>
+    <string name="improve_functionality">기능 향상</string>
+    <string name="improve_performance">성능 향상</string>
+    <string name="briefly_describe_feedback">피드백을 간략하게 설명</string>
+    <string name="detailed_feedback">자세한 피드백:</string>
+    <string name="type_here_">여기에 입력…</string>
+    <string name="submit_feedback">피드백 제출</string>
+    <string name="invalid_feedback">잘못된 피드백!</string>
+    <string name="no_email_app_installed">이메일 클라이언트 앱이 설치되지 않았습니다.</string>
+    <string name="share_message">야! %1$s을(를) 다운로드하여 장치에 대한 유용하고 자세한 정보를 얻으십시오. https://play.google.com/store/apps/details?id=%2$s</string>
 </resources>

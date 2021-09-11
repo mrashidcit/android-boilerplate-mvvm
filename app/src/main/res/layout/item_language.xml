@@ -15,19 +15,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
+        android:layout_marginHorizontal="@dimen/sdp_12"
+        android:layout_marginVertical="@dimen/sdp_6"
+        android:background="@drawable/bg_item"
         android:clickable="true"
         android:focusable="true"
-        android:padding="@dimen/sdp_12">
+        android:paddingHorizontal="@dimen/sdp_17"
+        android:paddingVertical="@dimen/sdp_12">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_language"
-            style="@style/tv_roboto_light_13_black_light_white_dark"
-            android:textSize="@dimen/ssp_11"
+            style="@style/tv_poppins_regular_11_black_1D1D1D_white_FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/sdp_12"
             android:text="@{language.name}"
+            android:textSize="@dimen/ssp_11"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

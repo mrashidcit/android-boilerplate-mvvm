@@ -10,6 +10,11 @@ import com.bumptech.glide.request.RequestOptions
  * @author Abdul Rahman
  */
 
+@BindingAdapter(value = ["resId"])
+fun loadDrawable(imageView: AppCompatImageView, resId: Int) {
+    imageView.setImageResource(resId)
+}
+
 @BindingAdapter(value = ["url", "placeholder", "circle"], requireAll = false)
 fun loadImage(
     imageView: AppCompatImageView,

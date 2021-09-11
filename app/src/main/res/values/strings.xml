@@ -7,14 +7,36 @@
     <string name="okay">Okay</string>
     <string name="cancel">Cancel</string>
 
-    <string name="random_users">Random Users</string>
-    <string name="user_detail">User Detail</string>
+    <string name="users">Users</string>
+    <string name="user_details">User Details</string>
     <string name="settings">Settings</string>
+    <string name="notification">Notification</string>
+    <string name="notification_text">Get detailed information about your device</string>
     <string name="theme">Theme</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="system_default">System default</string>
     <string name="language">Language</string>
     <string name="languages">Languages</string>
+    <string name="more">More</string>
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="share">Share</string>
+    <string name="share_message">Hey! Download %1$s to get detailed information about your device. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="rate_us">Rate us</string>
+    <string name="more_apps">More Apps</string>
+    <string name="version">Version</string>
+    <string name="give_feedback">Give Feedback</string>
+    <string name="how_we_can_improve">How we can improve ?</string>
+    <string name="improve_design">Improving Design</string>
+    <string name="improve_experience">Improving Experience</string>
+    <string name="improve_functionality">Improving Functionality</string>
+    <string name="improve_performance">Improving Performance</string>
+    <string name="briefly_describe_feedback">Briefly describe feedback</string>
+    <string name="detailed_feedback">Detailed feedback:</string>
+    <string name="type_here_">Type here…</string>
+    <string name="submit_feedback">Submit Feedback</string>
+    <string name="invalid_feedback">Invalid Feedback!</string>
+    <string name="no_email_app_installed">No email client apps installed</string>
 
 </resources>

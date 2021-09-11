@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="random_users">Utilizatori aleatori</string>
-    <string name="user_detail">Detalii utilizator</string>
     <string name="settings">Setări</string>
     <string name="language">Limba</string>
     <string name="languages">Limbi</string>
@@ -14,4 +12,26 @@
     <string name="dark">Întuneric</string>
     <string name="light">Ușoară</string>
     <string name="system_default">Defectiune de sistem</string>
+    <string name="notification">Notificare</string>
+    <string name="notification_text">Obțineți informații utile și detaliate despre dispozitivul dvs.</string>
+    <string name="more">Mai mult</string>
+    <string name="feedback">Părere</string>
+    <string name="privacy_policy">Politica de Confidențialitate</string>
+    <string name="share">Acțiune</string>
+    <string name="rate_us">e evalua</string>
+    <string name="more_apps">Mai multe aplicatii</string>
+    <string name="version">Versiune</string>
+    <string name="give_feedback">Dați feedback</string>
+    <string name="how_we_can_improve">Cum ne putem îmbunătăți?</string>
+    <string name="improve_design">Îmbunătățirea designului</string>
+    <string name="improve_experience">Îmbunătățirea experienței</string>
+    <string name="improve_functionality">Îmbunătățirea funcționalității</string>
+    <string name="improve_performance">Îmbunătățirea performanței</string>
+    <string name="briefly_describe_feedback">Descrieți pe scurt feedbackul</string>
+    <string name="detailed_feedback">Feedback detaliat:</string>
+    <string name="type_here_">Scrie aici…</string>
+    <string name="submit_feedback">Trimite parerea ta</string>
+    <string name="invalid_feedback">Feedback nevalid!</string>
+    <string name="no_email_app_installed">Nu există aplicații client de e-mail instalate</string>
+    <string name="share_message">Hei! Descărcați %1$s pentru a obține informații utile și detaliate despre dispozitivul dvs. https://play.google.com/store/apps/details?id=%2$s</string>
 </resources>

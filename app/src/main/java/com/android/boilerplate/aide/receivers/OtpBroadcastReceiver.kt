@@ -1,4 +1,4 @@
-package com.android.boilerplate.helper.receivers
+package com.android.boilerplate.aide.receivers
 
 import android.content.BroadcastReceiver
 import android.content.Context

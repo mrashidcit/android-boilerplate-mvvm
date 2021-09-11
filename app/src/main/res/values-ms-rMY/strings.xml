@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="random_users">Pengguna Rawak</string>
-    <string name="user_detail">Maklumat Pengguna</string>
     <string name="settings">Tetapan</string>
     <string name="language">Bahasa</string>
     <string name="languages">Bahasa</string>
@@ -14,4 +12,26 @@
     <string name="dark">Gelap</string>
     <string name="light">Cahaya</string>
     <string name="system_default">Lalai sistem</string>
+    <string name="notification">Pemberitahuan</string>
+    <string name="notification_text">Dapatkan maklumat berguna dan terperinci mengenai peranti anda</string>
+    <string name="more">Lebih banyak lagi</string>
+    <string name="feedback">Maklum balas</string>
+    <string name="privacy_policy">Dasar Privasi</string>
+    <string name="share">Berkongsi</string>
+    <string name="rate_us">Nilaikan kami</string>
+    <string name="more_apps">Lebih Banyak Aplikasi</string>
+    <string name="version">Versi</string>
+    <string name="give_feedback">Beri Maklum Balas</string>
+    <string name="how_we_can_improve">Bagaimana kita boleh meningkatkan?</string>
+    <string name="improve_design">Memperbaiki Reka Bentuk</string>
+    <string name="improve_experience">Meningkatkan Pengalaman</string>
+    <string name="improve_functionality">Meningkatkan Fungsi</string>
+    <string name="improve_performance">Meningkatkan Prestasi</string>
+    <string name="briefly_describe_feedback">Huraikan secara ringkas maklum balas</string>
+    <string name="detailed_feedback">Maklum balas terperinci:</string>
+    <string name="type_here_">Taip di sini…</string>
+    <string name="submit_feedback">Hantar Maklum Balas</string>
+    <string name="invalid_feedback">Maklum Balas Tidak Sah!</string>
+    <string name="no_email_app_installed">Tidak ada aplikasi pelanggan e-mel yang dipasang</string>
+    <string name="share_message">Hey! Muat turun %1$s untuk mendapatkan maklumat berguna dan terperinci mengenai peranti anda. https://play.google.com/store/apps/details?id=%2$s</string>
 </resources>

@@ -6,7 +6,7 @@ import com.android.boilerplate.model.data.remote.RemoteApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
@@ -21,7 +21,7 @@ import javax.inject.Singleton
  * @author Abdul Rahman
  */
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 class NetworkModule {
 
     @Provides

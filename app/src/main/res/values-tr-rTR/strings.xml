@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="random_users">Rastgele Kullanıcılar</string>
-    <string name="user_detail">Kullanıcı Ayrıntısı</string>
     <string name="settings">Ayarlar</string>
     <string name="language">Dil</string>
     <string name="languages">Diller</string>
@@ -14,4 +12,26 @@
     <string name="dark">Karanlık</string>
     <string name="light">Işık</string>
     <string name="system_default">Sistem varsayılanı</string>
+    <string name="notification">Bildirim</string>
+    <string name="notification_text">Cihazınız hakkında faydalı ve ayrıntılı bilgi alın</string>
+    <string name="more">Daha</string>
+    <string name="feedback">geri bildirim</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="share">Paylaş</string>
+    <string name="rate_us">Bizi değerlendirin</string>
+    <string name="more_apps">Daha fazla uygulama</string>
+    <string name="version">Sürüm</string>
+    <string name="give_feedback">Geri bildirimde bulunun</string>
+    <string name="how_we_can_improve">Nasıl iyileştirebiliriz?</string>
+    <string name="improve_design">Tasarımın İyileştirilmesi</string>
+    <string name="improve_experience">Deneyimi Geliştirmek</string>
+    <string name="improve_functionality">İşlevselliği Geliştirme</string>
+    <string name="improve_performance">Performansı iyileştirmek</string>
+    <string name="briefly_describe_feedback">Geri bildirimi kısaca açıklayın</string>
+    <string name="detailed_feedback">Ayrıntılı geri bildirim:</string>
+    <string name="type_here_">Buraya yaz…</string>
+    <string name="submit_feedback">Geri Bildirim Gönder</string>
+    <string name="invalid_feedback">Geçersiz Geribildirim!</string>
+    <string name="no_email_app_installed">Yüklü e-posta istemci uygulaması yok</string>
+    <string name="share_message">Hey! Cihazınız hakkında faydalı ve ayrıntılı bilgi almak için %1$s \'i indirin. https://play.google.com/store/apps/details?id=%2$s</string>
 </resources>

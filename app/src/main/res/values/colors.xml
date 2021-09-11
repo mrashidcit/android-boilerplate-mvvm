@@ -2,15 +2,32 @@
 <resources>
 
     <color name="white_FFFFFF_black_201E1E">#FFFFFF</color>
-    <color name="white_FFFFFF_black_101010">#FFFFFF</color>
     <color name="black_201E1E_white_FFFFFF">#201E1E</color>
 
-    <color name="purple_FF6200EE_black_101010">#FF6200EE</color>
-    <color name="purple_FF3700B3_black_101010">#FF3700B3</color>
+    <color name="blue_6ACBE0">#6ACBE0</color>
+    <color name="blue_69AFE2">#69AFE2</color>
 
-    <color name="teal_FF03DAC5">#FF03DAC5</color>
-    <color name="teal_FF018786">#FF018786</color>
+    <color name="purple_6859EA">#6859EA</color>
 
     <color name="black_000000">#000000</color>
+    <color name="black_1D1D1D">#1D1D1D</color>
+    <color name="black_343434">#343434</color>
+    <color name="black_201E1E">#201E1E</color>
+    <color name="black_000000_white_FFFFFF">@color/black_000000</color>
+    <color name="black_1D1D1D_white_FFFFFF">@color/black_1D1D1D</color>
+
+    <color name="gray_E9EEF1">#E9EEF1</color>
+    <color name="gray_E9EEF1_black_1D1D1D">@color/gray_E9EEF1</color>
+
+    <color name="white_FFFFFF">#FFFFFF</color>
+    <color name="white_F8F9FB">#F8F9FB</color>
+    <color name="white_F8F9FB_purple_6859EA">@color/white_F8F9FB</color>
+    <color name="white_F8F9FB_blue_6ACBE0">@color/white_F8F9FB</color>
+    <color name="white_FFFFFF_black_343434">@color/white_FFFFFF</color>
+
+    <color name="green_65C078">#65C078</color>
+    <color name="green_65C078_blue_6ACBE0">@color/green_65C078</color>
+    <color name="green_65C078_blue_69AFE2">@color/green_65C078</color>
+    <color name="green_65C078_purple_6859EA">@color/green_65C078</color>
 
 </resources>

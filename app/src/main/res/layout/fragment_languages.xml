@@ -5,7 +5,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/gray_E9EEF1_black_1D1D1D">
+
+        <include
+            android:id="@+id/layout_toolbar"
+            layout="@layout/layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showBack="@{true}"
+            app:title="@{@string/languages}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_languages"
@@ -16,7 +26,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_toolbar"
             tools:itemCount="5"
             tools:listitem="@layout/item_language" />
 

@@ -1,68 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
             name="listener"
-            type="com.android.boilerplate.view.main.settings.SettingsFragment" />
+            type="com.android.boilerplate.view.settings.SettingsFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/gray_E9EEF1_black_1D1D1D">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_theme_name"
-            style="@style/tv_roboto_light_13_black_light_white_dark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/sdp_12"
+        <include
+            android:id="@+id/layout_toolbar"
+            layout="@layout/layout_toolbar"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/system_default" />
+            app:showBack="@{true}"
+            app:title="@{@string/settings}" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_theme"
-            style="@style/tv_roboto_light_13_black_light_white_dark"
+        <include
+            android:id="@+id/item_notification"
+            layout="@layout/item_more_switch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="?selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
+            app:key="@{@string/notification}"
+            android:onClick="@{() -> listener.onNotificationClicked()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_toolbar" />
+
+        <include
+            android:id="@+id/item_theme"
+            layout="@layout/item_more_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:onClick="@{() -> listener.onThemeClicked()}"
-            android:padding="@dimen/sdp_12"
-            android:text="@string/theme"
+            app:key="@{@string/theme}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/item_notification" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_language_name"
-            style="@style/tv_roboto_light_13_black_light_white_dark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/sdp_12"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_theme"
-            tools:text="@string/system_default" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_language"
-            style="@style/tv_roboto_light_13_black_light_white_dark"
+        <include
+            android:id="@+id/item_language"
+            layout="@layout/item_more_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="?selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
             android:onClick="@{() -> listener.onLanguageClicked()}"
-            android:padding="@dimen/sdp_12"
-            android:text="@string/language"
+            app:key="@{@string/language}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_theme" />
+            app:layout_constraintTop_toBottomOf="@id/item_theme" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

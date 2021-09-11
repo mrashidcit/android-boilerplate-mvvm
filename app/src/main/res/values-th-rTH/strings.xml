@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="random_users">ผู้ใช้แบบสุ่ม</string>
-    <string name="user_detail">รายละเอียดผู้ใช้</string>
     <string name="settings">การตั้งค่า</string>
     <string name="language">ภาษา</string>
     <string name="languages">ภาษา</string>
@@ -14,4 +12,26 @@
     <string name="dark">มืด</string>
     <string name="light">เบา</string>
     <string name="system_default">ค่าเริ่มต้นของระบบ</string>
+    <string name="notification">การแจ้งเตือน</string>
+    <string name="notification_text">รับข้อมูลที่เป็นประโยชน์และรายละเอียดเกี่ยวกับอุปกรณ์ของคุณ</string>
+    <string name="more">มากกว่า</string>
+    <string name="feedback">คำติชม</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="share">แบ่งปัน</string>
+    <string name="rate_us">ให้คะแนนเรา</string>
+    <string name="more_apps">แอพเพิ่มเติม</string>
+    <string name="version">เวอร์ชั่น</string>
+    <string name="give_feedback">ให้คำติชม</string>
+    <string name="how_we_can_improve">เราจะปรับปรุงได้อย่างไร ?</string>
+    <string name="improve_design">ปรับปรุงการออกแบบ</string>
+    <string name="improve_experience">ปรับปรุงประสบการณ์</string>
+    <string name="improve_functionality">ปรับปรุงการทำงาน</string>
+    <string name="improve_performance">การปรับปรุงประสิทธิภาพ</string>
+    <string name="briefly_describe_feedback">อธิบายข้อเสนอแนะสั้นๆ</string>
+    <string name="detailed_feedback">ข้อเสนอแนะโดยละเอียด:</string>
+    <string name="type_here_">พิมพ์ที่นี่…</string>
+    <string name="submit_feedback">ส่งข้อเสนอแนะ</string>
+    <string name="invalid_feedback">คำติชมไม่ถูกต้อง!</string>
+    <string name="no_email_app_installed">ไม่ได้ติดตั้งแอปไคลเอนต์อีเมล</string>
+    <string name="share_message">เฮ้! ดาวน์โหลด %1$s เพื่อรับข้อมูลที่เป็นประโยชน์และละเอียดเกี่ยวกับอุปกรณ์ของคุณ https://play.google.com/store/apps/details?id=%2$s</string>
 </resources>

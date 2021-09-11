@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.android.boilerplate.view.feedback.FeedbackFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_E9EEF1_black_1D1D1D">
+
+        <include
+            android:id="@+id/layout_toolbar"
+            layout="@layout/layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showBack="@{true}"
+            app:title="@{@string/feedback}" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_feedback"
+                    android:layout_width="@dimen/sdp_160"
+                    android:layout_height="@dimen/sdp_136"
+                    android:layout_marginTop="@dimen/sdp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_feedback" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_feedback"
+                    style="@style/tv_poppins_bold_12_black_1D1D1D_white_FFFFFF"
+                    android:layout_marginTop="@dimen/sdp_12"
+                    android:text="@string/give_feedback"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/ssp_20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_feedback" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/how_we_can_improve"
+                    style="@style/tv_poppins_bold_12_black_1D1D1D_white_FFFFFF"
+                    android:layout_marginTop="@dimen/sdp_32"
+                    android:text="@string/how_we_can_improve"
+                    android:textSize="@dimen/ssp_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_feedback" />
+
+                <include
+                    android:id="@+id/item_improve_design"
+                    layout="@layout/item_more_switch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sdp_18"
+                    android:onClick="@{() -> listener.onImproveClicked(1)}"
+                    app:key="@{@string/improve_design}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/how_we_can_improve" />
+
+                <include
+                    android:id="@+id/item_improve_experience"
+                    layout="@layout/item_more_switch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sdp_3"
+                    android:onClick="@{() -> listener.onImproveClicked(2)}"
+                    app:key="@{@string/improve_experience}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item_improve_design" />
+
+                <include
+                    android:id="@+id/item_improve_functionality"
+                    layout="@layout/item_more_switch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sdp_3"
+                    android:onClick="@{() -> listener.onImproveClicked(3)}"
+                    app:key="@{@string/improve_functionality}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item_improve_experience" />
+
+                <include
+                    android:id="@+id/item_improve_performance"
+                    layout="@layout/item_more_switch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sdp_3"
+                    android:onClick="@{() -> listener.onImproveClicked(4)}"
+                    app:key="@{@string/improve_performance}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item_improve_functionality" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_care_to_share"
+                    style="@style/tv_poppins_bold_12_black_1D1D1D_white_FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_marginHorizontal="@dimen/sdp_18"
+                    android:layout_marginTop="@dimen/sdp_36"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/briefly_describe_feedback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item_improve_performance" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_feedback"
+                    style="@style/et_poppins_medium_12_gray_33393939_white_33FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_marginHorizontal="@dimen/sdp_18"
+                    android:layout_marginTop="@dimen/sdp_9"
+                    android:gravity="start"
+                    android:hint="@string/type_here_"
+                    android:lines="7"
+                    android:padding="@dimen/sdp_18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_care_to_share" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_submit_feedback"
+                    style="@style/btn_poppins_medium_12_white_FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sdp_50"
+                    android:layout_marginHorizontal="@dimen/sdp_18"
+                    android:layout_marginTop="@dimen/sdp_18"
+                    android:layout_marginBottom="@dimen/sdp_87"
+                    android:onClick="@{()->listener.onSubmitRatingClicked()}"
+                    android:text="@string/submit_feedback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_feedback" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.android.boilerplate">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
-        android:name=".Application"
+        android:name="com.android.boilerplate.Application"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +20,7 @@
         tools:targetApi="n">
 
         <activity
-            android:name=".view.splash.SplashActivity"
+            android:name="com.android.boilerplate.view.splash.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -29,11 +31,11 @@
         </activity>
 
         <activity
-            android:name=".view.main.MainActivity"
+            android:name="com.android.boilerplate.view.main.MainActivity"
             android:screenOrientation="portrait" />
 
         <receiver
-            android:name="com.android.boilerplate.helper.receivers.OtpBroadcastReceiver"
+            android:name="com.android.boilerplate.aide.receivers.OtpBroadcastReceiver"
             android:exported="true"
             android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
             <intent-filter>

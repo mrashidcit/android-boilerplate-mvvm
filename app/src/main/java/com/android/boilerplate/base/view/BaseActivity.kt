@@ -14,6 +14,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.observe
 import com.android.boilerplate.R
 import com.android.boilerplate.aide.utils.DialogUtils
 import com.android.boilerplate.base.viewmodel.BaseViewModel
@@ -71,16 +72,16 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         inputManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         getViewModel()?.let { viewModel ->
-            viewModel.loader.observe(this, {
+            viewModel.loader.observe(this) {
                 it?.let {
                     loaderVisibility(it)
                 }
-            })
-            viewModel.error.observe(this, {
+            }
+            viewModel.error.observe(this) {
                 it?.let {
                     showToast(it)
                 }
-            })
+            }
         }
         registerNetworkCallback()
     }

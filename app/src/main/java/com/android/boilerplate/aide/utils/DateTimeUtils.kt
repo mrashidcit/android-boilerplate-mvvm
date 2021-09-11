@@ -10,6 +10,14 @@ import java.util.*
 object DateTimeUtils {
 
     private const val DATE_TIME_FORMAT_UTC = "yyyy-MM-dd'T'HH:mm:ss"
+    private const val DATE_TIME_FORMAT_YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss"
+
+    fun convertTimeInMillisToDateTime(timeInMillis: Long): String {
+        val calendar = Calendar.getInstance()
+        calendar.timeInMillis = timeInMillis
+        val dateFormat = SimpleDateFormat(DATE_TIME_FORMAT_YYYY_MM_DD_HH_MM_SS, Locale.ENGLISH)
+        return dateFormat.format(calendar.time)
+    }
 
     fun convertSecToMinAndSec(seconds: Long): String {
         val min = (seconds % 3600) / 60
