@@ -17,13 +17,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.android.boilerplate"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -111,12 +111,12 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
     kapt "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
 
-    // customtabs: chrome tabs
+    // custom tabs: chrome tabs
     implementation "com.android.support:customtabs:$rootProject.chromeTabsVersion"
 
-    // google consent sdk
+    /*// google consent sdk
     implementation "com.google.android.ump:user-messaging-platform:$rootProject.googleUmpVersion"
 
     // google ads sdk
-    // implementation "com.google.android.gms:play-services-ads:$rootProject.googleAdsVersion"
+     implementation "com.google.android.gms:play-services-ads:$rootProject.googleAdsVersion"*/
 }

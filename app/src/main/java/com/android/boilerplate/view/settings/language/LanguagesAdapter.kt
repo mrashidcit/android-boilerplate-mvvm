@@ -2,7 +2,9 @@ package com.android.boilerplate.view.settings.language
 
 import android.content.Context
 import android.view.LayoutInflater
+import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import com.android.boilerplate.R
 import com.android.boilerplate.base.view.BaseAdapter
 import com.android.boilerplate.base.view.BaseViewHolder
@@ -15,7 +17,7 @@ import com.android.boilerplate.model.data.aide.Language
 class LanguagesAdapter(
     private val context: Context,
     private val listener: ((language: Language) -> Unit)? = null
-) : BaseAdapter<ItemLanguageBinding, Language, LanguagesAdapter.LanguageViewHolder>(
+) : BaseAdapter<ViewDataBinding, Language, BaseViewHolder<ViewDataBinding>>(
     LanguageDiffCallback()
 ) {
 
@@ -23,22 +25,39 @@ class LanguagesAdapter(
         return LayoutInflater.from(context)
     }
 
-    override fun getLayoutId(): Int {
+    override fun getLayoutId(viewType: Int): Int {
         return R.layout.item_language
     }
 
-    override fun createViewHolder(binding: ItemLanguageBinding)
-            : BaseViewHolder<ItemLanguageBinding> {
-        return LanguageViewHolder(binding)
+    @Suppress("UNCHECKED_CAST")
+    override fun createViewHolder(binding: ViewDataBinding): BaseViewHolder<ViewDataBinding> {
+        return LanguageViewHolder(binding as ItemLanguageBinding) as BaseViewHolder<ViewDataBinding>
     }
 
-    inner class LanguageViewHolder(private val binding: ItemLanguageBinding) :
+    override fun itemViewType(position: Int): Int {
+        return 1
+    }
+
+    override fun viewRecycled(holder: BaseViewHolder<ViewDataBinding>) {
+        val viewHolder = holder as RecyclerView.ViewHolder
+        if (viewHolder is LanguageViewHolder) {
+            viewHolder.binding.apply {
+                tvLanguage.text = null
+                ivSelected.setImageDrawable(null)
+            }
+        }
+    }
+
+    inner class LanguageViewHolder(val binding: ItemLanguageBinding) :
         BaseViewHolder<ItemLanguageBinding>(binding) {
 
         override fun bind(position: Int) {
             binding.apply {
                 val languageToBind = getItem(position)
                 language = languageToBind
+                if (languageToBind.selected) {
+                    ivSelected.setImageResource(R.drawable.ic_tick)
+                }
                 executePendingBindings()
                 itemView.setOnClickListener {
                     listener?.let {

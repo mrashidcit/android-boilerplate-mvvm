@@ -21,8 +21,10 @@
 
         <activity
             android:name="com.android.boilerplate.view.splash.SplashActivity"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +34,9 @@
 
         <activity
             android:name="com.android.boilerplate.view.main.MainActivity"
-            android:screenOrientation="portrait" />
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
 
         <receiver
             android:name="com.android.boilerplate.aide.receivers.OtpBroadcastReceiver"
