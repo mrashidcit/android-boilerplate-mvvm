@@ -37,8 +37,8 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_feedback"
-                    android:layout_width="@dimen/sdp_160"
-                    android:layout_height="@dimen/sdp_136"
+                    android:layout_width="@dimen/sdp_230"
+                    android:layout_height="@dimen/sdp_140"
                     android:layout_marginTop="@dimen/sdp_12"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -68,51 +68,55 @@
 
                 <include
                     android:id="@+id/item_improve_design"
-                    layout="@layout/item_more_switch"
+                    layout="@layout/item_feedback"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sdp_18"
                     android:layout_marginTop="@dimen/sdp_18"
-                    android:onClick="@{() -> listener.onImproveClicked(1)}"
+                    android:layout_marginEnd="@dimen/sdp_6"
                     app:key="@{@string/improve_design}"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/item_improve_experience"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/how_we_can_improve" />
 
                 <include
                     android:id="@+id/item_improve_experience"
-                    layout="@layout/item_more_switch"
+                    layout="@layout/item_feedback"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/sdp_3"
-                    android:onClick="@{() -> listener.onImproveClicked(2)}"
+                    android:layout_marginStart="@dimen/sdp_6"
+                    android:layout_marginTop="@dimen/sdp_18"
+                    android:layout_marginEnd="@dimen/sdp_18"
                     app:key="@{@string/improve_experience}"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/item_improve_design"
+                    app:layout_constraintTop_toBottomOf="@id/how_we_can_improve" />
+
+                <include
+                    android:id="@+id/item_improve_functionality"
+                    layout="@layout/item_feedback"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sdp_18"
+                    android:layout_marginTop="@dimen/sdp_12"
+                    android:layout_marginEnd="@dimen/sdp_6"
+                    app:key="@{@string/improve_functionality}"
+                    app:layout_constraintEnd_toStartOf="@id/item_improve_performance"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/item_improve_design" />
 
                 <include
-                    android:id="@+id/item_improve_functionality"
-                    layout="@layout/item_more_switch"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/sdp_3"
-                    android:onClick="@{() -> listener.onImproveClicked(3)}"
-                    app:key="@{@string/improve_functionality}"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/item_improve_experience" />
-
-                <include
                     android:id="@+id/item_improve_performance"
-                    layout="@layout/item_more_switch"
+                    layout="@layout/item_feedback"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/sdp_3"
-                    android:onClick="@{() -> listener.onImproveClicked(4)}"
+                    android:layout_marginStart="@dimen/sdp_6"
+                    android:layout_marginTop="@dimen/sdp_12"
+                    android:layout_marginEnd="@dimen/sdp_18"
                     app:key="@{@string/improve_performance}"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/item_improve_functionality" />
+                    app:layout_constraintStart_toEndOf="@id/item_improve_functionality"
+                    app:layout_constraintTop_toBottomOf="@id/item_improve_experience" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_care_to_share"

@@ -11,7 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import com.android.boilerplate.R
 import com.android.boilerplate.base.view.BaseFragment
@@ -30,7 +29,7 @@ class FeedbackFragment : BaseFragment() {
 
     private val viewModel: FeedbackViewModel by viewModels()
 
-    override fun getViewModel(): BaseViewModel? = viewModel
+    override fun getViewModel(): BaseViewModel = viewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,7 +52,7 @@ class FeedbackFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            layoutToolbar.ivBack.setOnClickListener { findNavController().popBackStack() }
+            layoutToolbar.ivBack.setOnClickListener { findNavController().navigateUp() }
             etFeedback.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(s: CharSequence?, start: Int, co: Int, a: Int) {}
 
@@ -67,52 +66,25 @@ class FeedbackFragment : BaseFragment() {
 
                 override fun afterTextChanged(s: Editable?) {}
             })
-            viewModel.improveDesign.observe(viewLifecycleOwner) {
-                it?.let {
-                    setImproveDesign(it)
-                }
+            itemImproveDesign.root.setOnClickListener {
+                etFeedback.error = null
+                it.isSelected = !it.isSelected
+                viewModel.improveDesign.value = it.isSelected
             }
-            viewModel.improveExperience.observe(viewLifecycleOwner) {
-                it?.let {
-                    setImproveExperience(it)
-                }
+            itemImproveExperience.root.setOnClickListener {
+                etFeedback.error = null
+                it.isSelected = !it.isSelected
+                viewModel.improveExperience.value = it.isSelected
             }
-            viewModel.improveFunctionality.observe(viewLifecycleOwner) {
-                it?.let {
-                    setImproveFunctionality(it)
-                }
+            itemImproveFunctionality.root.setOnClickListener {
+                etFeedback.error = null
+                it.isSelected = !it.isSelected
+                viewModel.improveFunctionality.value = it.isSelected
             }
-            viewModel.improvePerformance.observe(viewLifecycleOwner) {
-                it?.let {
-                    setImprovePerformance(it)
-                }
-            }
-        }
-    }
-
-    fun onImproveClicked(item: Int) {
-        viewModel.apply {
-            when (item) {
-                1 -> {
-                    improveDesign.value?.let {
-                        setImproveDesign(!it)
-                    }
-                }
-                2 -> {
-                    improveExperience.value?.let {
-                        setImproveExperience(!it)
-                    }
-                }
-                3 -> {
-                    improveFunctionality.value?.let {
-                        setImproveFunctionality(!it)
-                    }
-                }
-                else -> {
-                    improvePerformance.value?.let {
-                        setImprovePerformance(!it)
-                    }
-                }
+            itemImprovePerformance.root.setOnClickListener {
+                etFeedback.error = null
+                it.isSelected = !it.isSelected
+                viewModel.improvePerformance.value = it.isSelected
             }
         }
     }
@@ -144,7 +116,7 @@ class FeedbackFragment : BaseFragment() {
             }
             if (!TextUtils.isEmpty(binding.etFeedback.text?.trim())) {
                 description += "\n\n ${getString(R.string.detailed_feedback)}"
-                description += "\n ${binding.etFeedback.text.toString()}"
+                description += "\n\n ${binding.etFeedback.text.toString()}"
             }
             val intent = Intent(Intent.ACTION_SEND).apply {
                 type = "message/rfc822"
@@ -165,63 +137,14 @@ class FeedbackFragment : BaseFragment() {
 
     private fun validate(): Boolean {
         binding.apply {
-            if (TextUtils.isEmpty(etFeedback.text)) {
+            if (TextUtils.isEmpty(etFeedback.text) &&
+                !itemImproveDesign.root.isSelected && !itemImproveExperience.root.isSelected &&
+                !itemImproveFunctionality.root.isSelected && !itemImprovePerformance.root.isSelected
+            ) {
                 etFeedback.error = getString(R.string.invalid_feedback)
                 return false
             }
             return true
-        }
-    }
-
-    private fun setImproveDesign(value: Boolean) {
-        binding.apply {
-            itemImproveDesign.apply {
-                if (value) {
-                    etFeedback.error = null
-                    ivItem.setImageResource(R.drawable.ic_checked)
-                } else {
-                    ivItem.setImageResource(R.drawable.ic_unchecked)
-                }
-            }
-        }
-    }
-
-    private fun setImproveExperience(value: Boolean) {
-        binding.apply {
-            itemImproveExperience.apply {
-                if (value) {
-                    etFeedback.error = null
-                    ivItem.setImageResource(R.drawable.ic_checked)
-                } else {
-                    ivItem.setImageResource(R.drawable.ic_unchecked)
-                }
-            }
-        }
-    }
-
-    private fun setImproveFunctionality(value: Boolean) {
-        binding.apply {
-            itemImproveFunctionality.apply {
-                if (value) {
-                    etFeedback.error = null
-                    ivItem.setImageResource(R.drawable.ic_checked)
-                } else {
-                    ivItem.setImageResource(R.drawable.ic_unchecked)
-                }
-            }
-        }
-    }
-
-    private fun setImprovePerformance(value: Boolean) {
-        binding.apply {
-            itemImprovePerformance.apply {
-                if (value) {
-                    etFeedback.error = null
-                    ivItem.setImageResource(R.drawable.ic_checked)
-                } else {
-                    ivItem.setImageResource(R.drawable.ic_unchecked)
-                }
-            }
         }
     }
 }
