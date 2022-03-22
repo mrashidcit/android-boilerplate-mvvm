@@ -34,6 +34,7 @@
     <dimen name="sdp_50">@dimen/_50sdp</dimen>
     <dimen name="sdp_64">@dimen/_64sdp</dimen>
     <dimen name="sdp_87">@dimen/_87sdp</dimen>
+    <dimen name="sdp_96">@dimen/_96sdp</dimen>
     <dimen name="sdp_136">@dimen/_136sdp</dimen>
     <dimen name="sdp_140">@dimen/_140sdp</dimen>
     <dimen name="sdp_160">@dimen/_160sdp</dimen>

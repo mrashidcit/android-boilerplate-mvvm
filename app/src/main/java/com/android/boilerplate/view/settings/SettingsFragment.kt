@@ -51,7 +51,7 @@ class SettingsFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            layoutToolbar.ivBack.setOnClickListener { findNavController().popBackStack() }
+            layoutToolbar.ivBack.setOnClickListener { findNavController().navigateUp() }
             setNotification(viewModel.getNotification())
             itemTheme.value = viewModel.getSelectedThemeName()
             itemLanguage.value = viewModel.getSelectedLanguageName()

@@ -49,7 +49,7 @@ class LanguagesFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            layoutToolbar.ivBack.setOnClickListener { findNavController().popBackStack() }
+            layoutToolbar.ivBack.setOnClickListener { findNavController().navigateUp() }
             viewModel.languages.observe(viewLifecycleOwner) {
                 it?.let { setupLanguagesAdapters(it) }
             }

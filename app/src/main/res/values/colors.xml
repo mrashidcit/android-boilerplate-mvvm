@@ -23,6 +23,7 @@
     <color name="white_F8F9FB">#F8F9FB</color>
     <color name="white_F8F9FB_purple_6859EA">@color/white_F8F9FB</color>
     <color name="white_F8F9FB_blue_6ACBE0">@color/white_F8F9FB</color>
+    <color name="white_FFFFFF_blue_6ACBE0">@color/white_FFFFFF</color>
     <color name="white_FFFFFF_black_343434">@color/white_FFFFFF</color>
 
     <color name="green_65C078">#65C078</color>

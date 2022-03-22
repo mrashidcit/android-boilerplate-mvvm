@@ -44,7 +44,6 @@ class MainAdapter(
                 ivPicture.setImageDrawable(null)
                 tvName.text = null
                 tvEmail.text = null
-                tvGender.text = null
                 tvPhone.text = null
             }
         }

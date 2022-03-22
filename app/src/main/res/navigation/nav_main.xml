@@ -24,6 +24,21 @@
             app:destination="@id/dest_feedback"
             app:enterAnim="@anim/slide_in_from_right"
             app:popExitAnim="@anim/slide_out_from_left" />
+        <action
+            android:id="@+id/action_dest_main_to_dest_user_details"
+            app:destination="@id/dest_user_details"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:popExitAnim="@anim/slide_out_from_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dest_user_details"
+        android:name="com.android.boilerplate.view.userdetails.UserDetailsFragment"
+        android:label="@string/user_details"
+        tools:layout="@layout/fragment_user_details" >
+        <argument
+            android:name="user"
+            app:argType="com.android.boilerplate.model.data.local.database.entities.User" />
     </fragment>
 
     <fragment

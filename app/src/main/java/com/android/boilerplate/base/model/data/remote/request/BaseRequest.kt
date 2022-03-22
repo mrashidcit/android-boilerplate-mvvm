@@ -1,7 +1,7 @@
 package com.android.boilerplate.base.model.data.remote.request
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 /**
  * @author Abdul Rahman

@@ -72,7 +72,11 @@ class MainFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
 
     private fun setupUsersAdapters(users: List<User>) {
         if (!::adapter.isInitialized) {
-            adapter = MainAdapter(requireContext())
+            adapter = MainAdapter(requireContext()) {
+                findNavController().navigate(
+                    MainFragmentDirections.actionDestMainToDestUserDetails(it)
+                )
+            }
         }
         binding.apply {
             rvUsers.adapter = adapter

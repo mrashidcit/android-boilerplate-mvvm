@@ -50,7 +50,7 @@ class MoreFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            layoutToolbar.ivBack.setOnClickListener { findNavController().popBackStack() }
+            layoutToolbar.ivBack.setOnClickListener { findNavController().navigateUp() }
         }
     }
 
