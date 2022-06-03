@@ -1,5 +1,6 @@
 package com.android.boilerplate.aide.utils
 
+import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -18,6 +19,7 @@ import com.android.boilerplate.view.splash.SplashActivity
  */
 object NotificationUtils {
 
+    @SuppressLint("UnspecifiedImmutableFlag")
     fun sendNotification(context: Context, title: String, text: String) {
         val lightColor = ContextCompat.getColor(context, R.color.green_65C078)
         val notificationManager =
@@ -36,9 +38,13 @@ object NotificationUtils {
             notificationManager.createNotificationChannel(channel)
         }
         val intent = Intent(context, SplashActivity::class.java)
-        val pendingIntent = PendingIntent.getActivity(
-            context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT
-        )
+        val pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+        } else {
+            PendingIntent.getActivity(
+                context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT
+            )
+        }
         val notification = NotificationCompat.Builder(context, context.packageName)
             .setLargeIcon(BitmapFactory.decodeResource(context.resources, R.mipmap.ic_launcher))
             .setLights(lightColor, 1000, 2000)

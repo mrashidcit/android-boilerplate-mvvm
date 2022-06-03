@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.MutableLiveData
 import com.android.boilerplate.R
+import com.android.boilerplate.base.model.repository.BaseRepositoryImp
 import com.android.boilerplate.model.data.aide.Language
 import com.android.boilerplate.model.data.local.preference.Preferences
 import com.google.gson.Gson
@@ -18,7 +19,7 @@ class SettingsRepositoryImp @Inject constructor(
     @ApplicationContext
     private val context: Context,
     private val preferences: Preferences
-) : SettingsRepository {
+) : SettingsRepository, BaseRepositoryImp(preferences) {
 
     private val languages = mutableListOf<Language>()
 

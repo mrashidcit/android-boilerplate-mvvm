@@ -14,7 +14,7 @@ import com.android.boilerplate.R
 import com.android.boilerplate.base.view.BaseFragment
 import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.databinding.FragmentMainBinding
-import com.android.boilerplate.model.data.local.database.entities.User
+import com.android.boilerplate.model.data.local.database.entities.RandomUser
 import com.android.boilerplate.viewmodel.main.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +24,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
 
-    private lateinit var adapter: MainAdapter
+    private lateinit var adapter: RandomUsersAdapter
     private lateinit var binding: FragmentMainBinding
 
     private val viewModel: MainViewModel by viewModels()
@@ -56,13 +56,23 @@ class MainFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
                 showOverflowMenu()
             }
             swipeRefreshLayout.setOnRefreshListener(this@MainFragment)
-            viewModel.users.observe(viewLifecycleOwner) {
+            viewModel.randomUsers.observe(viewLifecycleOwner) {
                 it.let {
                     swipeRefreshLayout.isRefreshing = false
-                    setupUsersAdapters(it)
+                    setupRandomUsersAdapters(it)
                 }
             }
             viewModel.getUsers()
+        }
+    }
+
+    override fun loaderVisibility(visibility: Boolean) {
+        binding.swipeRefreshLayout.apply {
+            if (isRefreshing) {
+                isRefreshing = visibility
+            } else {
+                super.loaderVisibility(visibility)
+            }
         }
     }
 
@@ -70,9 +80,9 @@ class MainFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         viewModel.getLatestUsers()
     }
 
-    private fun setupUsersAdapters(users: List<User>) {
+    private fun setupRandomUsersAdapters(randomUsers: List<RandomUser>) {
         if (!::adapter.isInitialized) {
-            adapter = MainAdapter(requireContext()) {
+            adapter = RandomUsersAdapter(requireContext()) {
                 findNavController().navigate(
                     MainFragmentDirections.actionDestMainToDestUserDetails(it)
                 )
@@ -80,7 +90,7 @@ class MainFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         }
         binding.apply {
             rvUsers.adapter = adapter
-            adapter.submitList(users)
+            adapter.submitList(randomUsers)
         }
     }
 

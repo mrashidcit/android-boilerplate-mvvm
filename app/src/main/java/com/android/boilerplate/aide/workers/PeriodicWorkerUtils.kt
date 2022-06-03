@@ -14,7 +14,7 @@ object PeriodicWorkerUtils {
     fun createPeriodicWorker(context: Context) {
         val periodicWorkRequest = if (BuildConfig.DEBUG) {
             PeriodicWorkRequest
-                .Builder(PeriodicWorker::class.java, 30, TimeUnit.SECONDS)
+                .Builder(PeriodicWorker::class.java, 1, TimeUnit.DAYS)
                 .addTag(PeriodicWorker::class.java.simpleName)
                 .build()
         } else {

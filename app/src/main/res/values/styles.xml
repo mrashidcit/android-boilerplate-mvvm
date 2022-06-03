@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- ViewGroup styles - - - - - -->
+    <style name="Clickable">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="SelectableItemBackgroundBorderless" parent="Clickable">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="SelectableItemBackground" parent="Clickable">
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+    <!-- - - - - - -->
+
     <!-- AppCompatTextView styles - - - - - -->
     <style name="tv_root" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>

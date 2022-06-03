@@ -12,7 +12,7 @@ import kotlinx.parcelize.Parcelize
  */
 @Entity
 @Parcelize
-data class User(
+data class RandomUser(
     @PrimaryKey(autoGenerate = true)
     @SerializedName("uid")
     var id: Int? = null,

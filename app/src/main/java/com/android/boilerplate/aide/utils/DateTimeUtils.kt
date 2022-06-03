@@ -10,12 +10,14 @@ import java.util.*
 object DateTimeUtils {
 
     private const val DATE_TIME_FORMAT_UTC = "yyyy-MM-dd'T'HH:mm:ss"
-    private const val DATE_TIME_FORMAT_YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss"
+    const val DATE_TIME_FORMAT_YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss"
+    const val DATE_TIME_FORMAT_MMM_D_H_MM = "MMM d, h:mm a"
+    const val DATE_TIME_FORMAT_MMM_D_YYYY = "MMM d, yyyy"
 
-    fun convertTimeInMillisToDateTime(timeInMillis: Long): String {
+    fun convertUtcDateToFormat(utcDate: String, format: String): String {
         val calendar = Calendar.getInstance()
-        calendar.timeInMillis = timeInMillis
-        val dateFormat = SimpleDateFormat(DATE_TIME_FORMAT_YYYY_MM_DD_HH_MM_SS, Locale.ENGLISH)
+        calendar.timeInMillis = convertUtcTimeToMillis(utcDate)
+        val dateFormat = SimpleDateFormat(format, Locale.ENGLISH)
         return dateFormat.format(calendar.time)
     }
 
@@ -25,7 +27,7 @@ object DateTimeUtils {
         return String.format("%02d:%02d", min, sec)
     }
 
-    private fun convertUtcTimeToMillis(utcDate: String): Long? {
+    private fun convertUtcTimeToMillis(utcDate: String): Long {
         val dateFormat = SimpleDateFormat(DATE_TIME_FORMAT_UTC, Locale.ENGLISH)
         val date = dateFormat.parse(utcDate)
         val timeZoneId = Calendar.getInstance().timeZone.id
@@ -35,13 +37,12 @@ object DateTimeUtils {
     }
 
     fun generateReadableTimeStamp(utcDate: String): String {
-        convertUtcTimeToMillis(utcDate)?.let {
+        convertUtcTimeToMillis(utcDate).let {
             return DateUtils.getRelativeTimeSpanString(
                 it,
                 System.currentTimeMillis(),
                 0
             ).toString()
         }
-        return utcDate
     }
 }

@@ -35,12 +35,13 @@ object DialogUtils {
         @StringRes positiveButtonText: Int = R.string.okay,
         positiveClickListener: DialogInterface.OnClickListener? = null,
         @StringRes negativeButtonText: Int = -1,
+        negativeClickListener: DialogInterface.OnClickListener? = null,
         cancelable: Boolean = true
     ) {
         if (this::dialog.isInitialized && dialog.isShowing) {
             return
         }
-        val dialogBuilder = AlertDialog.Builder(context)
+        val dialogBuilder = AlertDialog.Builder(context, R.style.Alert)
         dialogBuilder.apply {
             if (titleId != -1)
                 setTitle(titleId)
@@ -51,7 +52,7 @@ object DialogUtils {
             if (positiveButtonText != -1)
                 setPositiveButton(positiveButtonText, positiveClickListener)
             if (negativeButtonText != -1)
-                setNegativeButton(negativeButtonText, null)
+                setNegativeButton(negativeButtonText, negativeClickListener)
             setCancelable(cancelable)
         }
         dialog = dialogBuilder.create()

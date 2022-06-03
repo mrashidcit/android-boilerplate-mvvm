@@ -3,6 +3,7 @@ package com.android.boilerplate.base.view
 import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.view.Window
 import android.widget.EditText
 import androidx.activity.OnBackPressedCallback
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -24,6 +25,18 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(), Base
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         hideKeyboard()
+    }
+
+    override fun changeStatusBarColor(color: Int) {
+        activity?.changeStatusBarColor(color)
+    }
+
+    override fun resetStatusBarColor() {
+        activity?.resetStatusBarColor()
+    }
+
+    override fun hideSystemBars(hide: Boolean, window: Window?, view: View?) {
+        activity?.hideSystemBars(hide, window, view)
     }
 
     override fun setSoftInputMode(mode: Int) {
@@ -56,6 +69,10 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(), Base
 
     override fun showToast(message: String?) {
         activity?.showToast(message)
+    }
+
+    override fun showSnackBar(view: View, message: String) {
+        activity?.showSnackBar(view, message)
     }
 
     fun callBackKeyHandling(function: () -> Unit) {

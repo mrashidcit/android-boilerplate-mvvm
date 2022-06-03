@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name" translatable="false">android-boilerplate-mvvm</string>
+    <string name="app_name_uppercase" translatable="false">ANDROID-BOILERPLATE-MVVM</string>
+    <string name="image" translatable="false">-IMG-</string>
+    <string name="video" translatable="false">-VID-</string>
 
     <string name="session_expired">Session expired!</string>
     <string name="no_internet_connectivity">No internet connectivity!</string>

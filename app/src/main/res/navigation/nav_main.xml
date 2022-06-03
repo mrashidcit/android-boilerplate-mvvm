@@ -37,8 +37,8 @@
         android:label="@string/user_details"
         tools:layout="@layout/fragment_user_details" >
         <argument
-            android:name="user"
-            app:argType="com.android.boilerplate.model.data.local.database.entities.User" />
+            android:name="randomUser"
+            app:argType="com.android.boilerplate.model.data.local.database.entities.RandomUser" />
     </fragment>
 
     <fragment

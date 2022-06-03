@@ -14,6 +14,7 @@ open class BaseViewModel : ViewModel() {
 
     val error = MutableLiveData<String>()
     val loader = MutableLiveData<Boolean>()
+    val actionOnError = MutableLiveData<HttpException>()
 
     private fun showError(e: String) {
         error.postValue(e)
@@ -23,20 +24,25 @@ open class BaseViewModel : ViewModel() {
         loader.postValue(show)
     }
 
+    private fun takeActionOnError(exception: HttpException) {
+        actionOnError.postValue(exception)
+    }
+
     fun handleException(exception: Exception) {
         showLoader(false)
         when (exception) {
             is TimeoutException, is SocketTimeoutException -> {
-                showError(exception.toString())
+                showError(exception.message ?: exception.toString())
             }
             is UnknownHostException -> {
-                showError(exception.toString())
+                showError(exception.message ?: exception.toString())
             }
             is HttpException -> {
-                showError(exception.toString())
+                if (exception.code() == 401) takeActionOnError(exception)
+                showError(exception.message ?: exception.toString())
             }
             else -> {
-                showError(exception.toString())
+                showError(exception.message ?: exception.toString())
             }
         }
     }

@@ -8,11 +8,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.android.boilerplate.R
-import com.android.boilerplate.aide.utils.ImageUtils
 import com.android.boilerplate.base.view.BaseFragment
 import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.databinding.FragmentUserDetailsBinding
-import com.android.boilerplate.model.data.local.database.entities.User
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -48,7 +46,7 @@ class UserDetailsFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             layoutToolbar.ivBack.setOnClickListener { findNavController().navigateUp() }
-            user = args.user
+            randomUser = args.randomUser
             executePendingBindings()
         }
     }

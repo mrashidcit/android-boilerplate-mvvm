@@ -2,14 +2,18 @@ package com.android.boilerplate.model.repository.feedback
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
+import com.android.boilerplate.base.model.repository.BaseRepositoryImp
+import com.android.boilerplate.model.data.local.preference.Preferences
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 /**
  * @author Abdul Rahman
  */
-class FeedbackRepositoryImp @Inject constructor(@ApplicationContext private val context: Context) :
-    FeedbackRepository {
+class FeedbackRepositoryImp @Inject constructor(
+    @ApplicationContext private val context: Context,
+    private val preferences: Preferences
+) : FeedbackRepository, BaseRepositoryImp(preferences) {
 
     private val improveDesign = MutableLiveData<Boolean>(false)
     private val improveExperience = MutableLiveData<Boolean>(false)

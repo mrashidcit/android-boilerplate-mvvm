@@ -2,8 +2,9 @@ package com.android.boilerplate.di
 
 import android.content.Context
 import androidx.room.Room
+import com.android.boilerplate.R
 import com.android.boilerplate.model.data.local.database.Database
-import com.android.boilerplate.model.data.local.database.daos.UserDao
+import com.android.boilerplate.model.data.local.database.daos.RandomUserDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,10 +25,10 @@ class DatabaseModule {
         return Room.databaseBuilder(
             context,
             Database::class.java,
-            "db-boilerplate"
+            context.getString(R.string.app_name)
         ).build()
     }
 
     @Provides
-    fun provideUserDao(database: Database): UserDao = database.userDao()
+    fun provideRandomUserDao(database: Database): RandomUserDao = database.randomUserDao()
 }

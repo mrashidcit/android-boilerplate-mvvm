@@ -5,17 +5,15 @@ import com.android.boilerplate.model.repository.more.MoreRepositoryImp
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
+import dagger.hilt.android.components.ViewModelComponent
 
 /**
  * @author Abdul Rahman
  */
 @Module
-@InstallIn(SingletonComponent::class)
+@InstallIn(ViewModelComponent::class)
 abstract class MoreModule {
 
-    @Singleton
     @Binds
     abstract fun bindMoreRepository(repositoryImp: MoreRepositoryImp)
             : MoreRepository

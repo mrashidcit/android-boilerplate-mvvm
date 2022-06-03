@@ -3,11 +3,13 @@ package com.android.boilerplate.base.view
 import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.view.Window
 import android.widget.EditText
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.observe
 import com.android.boilerplate.base.viewmodel.BaseViewModel
+import retrofit2.HttpException
 
 /**
  * @author Abdul Rahman
@@ -39,7 +41,24 @@ abstract class BaseFragment : Fragment(), BaseView {
                     showToast(it)
                 }
             }
+            viewModel.actionOnError.observe(viewLifecycleOwner) {
+                it?.let {
+                    takeActionOnError(it)
+                }
+            }
         }
+    }
+
+    override fun changeStatusBarColor(color: Int) {
+        activity?.changeStatusBarColor(color)
+    }
+
+    override fun resetStatusBarColor() {
+        activity?.resetStatusBarColor()
+    }
+
+    override fun hideSystemBars(hide: Boolean, window: Window?, view: View?) {
+        activity?.hideSystemBars(hide, window, view)
     }
 
     override fun setSoftInputMode(mode: Int) {
@@ -72,6 +91,14 @@ abstract class BaseFragment : Fragment(), BaseView {
 
     override fun showToast(message: String?) {
         activity?.showToast(message)
+    }
+
+    override fun showSnackBar(view: View, message: String) {
+        activity?.showSnackBar(view, message)
+    }
+
+    override fun takeActionOnError(exception: HttpException) {
+        activity?.takeActionOnError(exception)
     }
 
     fun callBackKeyHandling(function: () -> Unit) {

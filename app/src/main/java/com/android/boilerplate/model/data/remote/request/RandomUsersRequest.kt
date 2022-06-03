@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
  * @author Abdul Rahman
  */
 @Parcelize
-data class UsersRequest(
+data class RandomUsersRequest(
     @SerializedName("results")
     var results: Int? = null
 ) : Parcelable, BaseRequest()

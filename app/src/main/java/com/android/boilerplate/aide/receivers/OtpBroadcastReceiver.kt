@@ -33,7 +33,7 @@ class OtpBroadcastReceiver : BroadcastReceiver() {
                                                 .sendBroadcast(localIntent)
                                         }
                                     } catch (exception: Exception) {
-                                        Log.e(this::class.java.simpleName, exception.toString())
+                                        Log.e(TAG, exception.toString())
                                     }
                                 }
                             }
@@ -52,5 +52,9 @@ class OtpBroadcastReceiver : BroadcastReceiver() {
                 }
             }
         }
+    }
+
+    companion object {
+        private val TAG = OtpBroadcastReceiver::class.java.simpleName
     }
 }

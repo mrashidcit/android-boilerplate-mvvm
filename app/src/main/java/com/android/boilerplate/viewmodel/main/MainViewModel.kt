@@ -2,7 +2,7 @@ package com.android.boilerplate.viewmodel.main
 
 import androidx.lifecycle.viewModelScope
 import com.android.boilerplate.base.viewmodel.BaseViewModel
-import com.android.boilerplate.model.data.remote.request.UsersRequest
+import com.android.boilerplate.model.data.remote.request.RandomUsersRequest
 import com.android.boilerplate.model.repository.main.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -16,13 +16,13 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(private val repository: MainRepository) :
     BaseViewModel() {
 
-    val users = repository.getUsersLiveData()
+    val randomUsers = repository.getRandomUsersLiveData()
 
     fun getUsers() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 showLoader(true)
-                repository.getUsers(UsersRequest(10))
+                repository.getRandomUsers(RandomUsersRequest(10))
                 showLoader(false)
             } catch (exception: Exception) {
                 handleException(exception)
@@ -34,7 +34,7 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 showLoader(true)
-                repository.getLatestUsers(UsersRequest(10))
+                repository.getLatestRandomUsers(RandomUsersRequest(10))
                 showLoader(false)
             } catch (exception: Exception) {
                 handleException(exception)

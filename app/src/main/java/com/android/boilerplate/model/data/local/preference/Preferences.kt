@@ -1,8 +1,9 @@
 package com.android.boilerplate.model.data.local.preference
 
 import android.content.Context
-import android.content.SharedPreferences
 import com.android.boilerplate.R
+import com.android.boilerplate.model.data.remote.user.User
+import com.google.gson.Gson
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -13,7 +14,8 @@ import javax.inject.Singleton
 @Singleton
 class Preferences @Inject constructor(@ApplicationContext private val context: Context) {
 
-    private val sharedPreferences: SharedPreferences =
+    private val gson = Gson()
+    private val sharedPreferences =
         context.getSharedPreferences(context.getString(R.string.app_name), Context.MODE_PRIVATE)
 
     fun clear() {
@@ -60,6 +62,15 @@ class Preferences @Inject constructor(@ApplicationContext private val context: C
 
     fun getLong(key: String): Long {
         return sharedPreferences.getLong(key, -1L)
+    }
+
+    fun setSigninUser(user: User) {
+        sharedPreferences.edit().putString("user", gson.toJson(user)).apply()
+    }
+
+    fun getSigninUser(): User? {
+        val user = sharedPreferences.getString("user", null)
+        return gson.fromJson(user, User::class.java)
     }
 
     companion object {
