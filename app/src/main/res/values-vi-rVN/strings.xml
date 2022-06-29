@@ -34,4 +34,8 @@
     <string name="invalid_feedback">Phản hồi không hợp lệ!</string>
     <string name="no_email_app_installed">Không có ứng dụng email khách nào được cài đặt</string>
     <string name="share_message">Chào! Tải xuống %1$s để nhận thông tin hữu ích và chi tiết về thiết bị của bạn. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">Nhà</string>
+    <string name="users">Người dùng</string>
+    <string name="open_users">Người dùng mở</string>
+    <string name="user_details">Chi tiết người dùng</string>
 </resources>

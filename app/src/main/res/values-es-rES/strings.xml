@@ -34,4 +34,8 @@
     <string name="invalid_feedback">¡Comentarios no válidos!</string>
     <string name="no_email_app_installed">No hay aplicaciones de cliente de correo electrónico instaladas</string>
     <string name="share_message">¡Oye! Descarga %1$s para obtener información útil y detallada sobre tu dispositivo. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">Hogar</string>
+    <string name="users">Usuarios</string>
+    <string name="open_users">Usuarios abiertos</string>
+    <string name="user_details">Detalles de usuario</string>
 </resources>

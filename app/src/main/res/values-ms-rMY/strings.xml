@@ -34,4 +34,8 @@
     <string name="invalid_feedback">Maklum Balas Tidak Sah!</string>
     <string name="no_email_app_installed">Tidak ada aplikasi pelanggan e-mel yang dipasang</string>
     <string name="share_message">Hey! Muat turun %1$s untuk mendapatkan maklumat berguna dan terperinci mengenai peranti anda. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">Rumah</string>
+    <string name="users">Pengguna</string>
+    <string name="open_users">Buka Pengguna</string>
+    <string name="user_details">Butiran Pengguna</string>
 </resources>

@@ -34,4 +34,8 @@
     <string name="invalid_feedback">Feedback nevalid!</string>
     <string name="no_email_app_installed">Nu există aplicații client de e-mail instalate</string>
     <string name="share_message">Hei! Descărcați %1$s pentru a obține informații utile și detaliate despre dispozitivul dvs. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">Acasă</string>
+    <string name="users">Utilizatori</string>
+    <string name="open_users">Deschideți Utilizatori</string>
+    <string name="user_details">Detalii utilizator</string>
 </resources>

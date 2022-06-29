@@ -34,4 +34,8 @@
     <string name="invalid_feedback">คำติชมไม่ถูกต้อง!</string>
     <string name="no_email_app_installed">ไม่ได้ติดตั้งแอปไคลเอนต์อีเมล</string>
     <string name="share_message">เฮ้! ดาวน์โหลด %1$s เพื่อรับข้อมูลที่เป็นประโยชน์และละเอียดเกี่ยวกับอุปกรณ์ของคุณ https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">บ้าน</string>
+    <string name="users">ผู้ใช้</string>
+    <string name="open_users">ผู้ใช้ที่เปิดอยู่</string>
+    <string name="user_details">รายละเอียดผู้ใช้</string>
 </resources>

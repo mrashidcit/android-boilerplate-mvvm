@@ -34,4 +34,8 @@
     <string name="invalid_feedback">अमान्य फ़ीडबैक!</string>
     <string name="no_email_app_installed">कोई ईमेल क्लाइंट ऐप इंस्टॉल नहीं है</string>
     <string name="share_message">अरे! अपने डिवाइस के बारे में उपयोगी और विस्तृत जानकारी प्राप्त करने के लिए %1$s डाउनलोड करें। https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">घर</string>
+    <string name="users">उपयोगकर्ताओं</string>
+    <string name="open_users">उपयोगकर्ता खोलें</string>
+    <string name="user_details">उपयोगकर्ता की जानकारी</string>
 </resources>

@@ -34,4 +34,8 @@
     <string name="invalid_feedback">Umpan Balik Tidak Valid!</string>
     <string name="no_email_app_installed">Tidak ada aplikasi klien email yang terpasang</string>
     <string name="share_message">Hei! Unduh %1$s untuk mendapatkan informasi yang berguna dan mendetail tentang perangkat Anda. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">Rumah</string>
+    <string name="users">Pengguna</string>
+    <string name="open_users">Buka Pengguna</string>
+    <string name="user_details">Detail Pengguna</string>
 </resources>

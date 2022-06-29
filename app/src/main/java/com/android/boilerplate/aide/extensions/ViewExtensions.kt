@@ -94,8 +94,8 @@ fun View.collapse() {
 /**
  * @param onSafeClick delegate with view parameter to perform on safe click
  */
-fun View.setSafeOnClickListener(onSafeClick: (View) -> Unit) {
-    val safeClickListener = SafeClickListener {
+fun View.setSafeOnClickListener(defaultInterval: Int = 2000, onSafeClick: (View) -> Unit) {
+    val safeClickListener = SafeClickListener(defaultInterval) {
         onSafeClick(it)
     }
     setOnClickListener(safeClickListener)

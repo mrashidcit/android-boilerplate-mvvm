@@ -34,4 +34,8 @@
     <string name="privacy_policy">سیاست حفظ حریم خصوصی</string>
     <string name="share">اشتراک گذاری</string>
     <string name="share_message">سلام %1$s را بارگیری کنید تا اطلاعات مفید و مفصلی درباره دستگاه خود دریافت کنید. https://play.google.com/store/apps/details؟id=%2$s</string>
+    <string name="home">صفحه اصلی</string>
+    <string name="users">کاربران</string>
+    <string name="open_users">کاربران را باز کنید</string>
+    <string name="user_details">مشخصات کاربر</string>
 </resources>

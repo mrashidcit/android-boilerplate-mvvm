@@ -34,4 +34,8 @@
     <string name="invalid_feedback">ملاحظات غير صحيحة!</string>
     <string name="no_email_app_installed">لا توجد تطبيقات عميل بريد إلكتروني مثبتة</string>
     <string name="share_message">مهلا! قم بتنزيل %1$s للحصول على معلومات مفيدة ومفصلة عن جهازك. https://play.google.com/store/apps/details؟id=%2$s</string>
+    <string name="home">گھر</string>
+    <string name="users">صارفین</string>
+    <string name="open_users">صارفین کھولیں۔</string>
+    <string name="user_details">صارف کی تفصیلات</string>
 </resources>

@@ -34,4 +34,8 @@
     <string name="invalid_feedback">Geçersiz Geribildirim!</string>
     <string name="no_email_app_installed">Yüklü e-posta istemci uygulaması yok</string>
     <string name="share_message">Hey! Cihazınız hakkında faydalı ve ayrıntılı bilgi almak için %1$s \'i indirin. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">Ev</string>
+    <string name="users">Kullanıcılar</string>
+    <string name="open_users">Açık Kullanıcılar</string>
+    <string name="user_details">Kullanıcı detayları</string>
 </resources>

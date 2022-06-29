@@ -1,4 +1,4 @@
-package com.android.boilerplate.view.main
+package com.android.boilerplate.view.user
 
 import android.content.Context
 import android.view.LayoutInflater

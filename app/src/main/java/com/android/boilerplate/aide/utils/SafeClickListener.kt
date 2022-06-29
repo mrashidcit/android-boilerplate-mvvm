@@ -9,7 +9,7 @@ import android.view.View
  * @param onSafeClick higher order function i.e delegate pointing to original callback
  */
 class SafeClickListener(
-    private val defaultInterval: Int = 2000,
+    private val defaultInterval: Int,
     private val onSafeClick: (View) -> Unit
 ) : View.OnClickListener {
 

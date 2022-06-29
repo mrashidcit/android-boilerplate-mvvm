@@ -34,4 +34,8 @@
     <string name="invalid_feedback">Недействительный отзыв!</string>
     <string name="no_email_app_installed">Не установлены почтовые клиентские приложения</string>
     <string name="share_message">Привет! Загрузите %1$s, чтобы получить полезную и подробную информацию о вашем устройстве. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">Дом</string>
+    <string name="users">Пользователи</string>
+    <string name="open_users">Открытые пользователи</string>
+    <string name="user_details">Сведения о пользователе</string>
 </resources>

@@ -34,4 +34,8 @@
     <string name="invalid_feedback">Ongeldige feedback!</string>
     <string name="no_email_app_installed">Geen e-mailclient-apps geïnstalleerd</string>
     <string name="share_message">Hallo! Download %1$s voor nuttige en gedetailleerde informatie over uw apparaat. https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="home">Huis</string>
+    <string name="users">Gebruikers</string>
+    <string name="open_users">Gebruikers openen</string>
+    <string name="user_details">gebruikersdetails</string>
 </resources>

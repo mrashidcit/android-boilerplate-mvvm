@@ -9,12 +9,11 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.android.boilerplate.R
+import com.android.boilerplate.aide.extensions.setSafeOnClickListener
 import com.android.boilerplate.base.view.BaseFragment
 import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.databinding.FragmentMainBinding
-import com.android.boilerplate.model.data.local.database.entities.RandomUser
 import com.android.boilerplate.viewmodel.main.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,9 +21,8 @@ import dagger.hilt.android.AndroidEntryPoint
  * @author Abdul Rahman
  */
 @AndroidEntryPoint
-class MainFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
+class MainFragment : BaseFragment() {
 
-    private lateinit var adapter: RandomUsersAdapter
     private lateinit var binding: FragmentMainBinding
 
     private val viewModel: MainViewModel by viewModels()
@@ -55,42 +53,9 @@ class MainFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
             layoutToolbar.ivMore.setOnClickListener {
                 showOverflowMenu()
             }
-            swipeRefreshLayout.setOnRefreshListener(this@MainFragment)
-            viewModel.randomUsers.observe(viewLifecycleOwner) {
-                it.let {
-                    swipeRefreshLayout.isRefreshing = false
-                    setupRandomUsersAdapters(it)
-                }
+            btnLoadUsers.setSafeOnClickListener {
+                findNavController().navigate(MainFragmentDirections.actionDestMainToDestUsers())
             }
-            viewModel.getUsers()
-        }
-    }
-
-    override fun loaderVisibility(visibility: Boolean) {
-        binding.swipeRefreshLayout.apply {
-            if (isRefreshing) {
-                isRefreshing = visibility
-            } else {
-                super.loaderVisibility(visibility)
-            }
-        }
-    }
-
-    override fun onRefresh() {
-        viewModel.getLatestUsers()
-    }
-
-    private fun setupRandomUsersAdapters(randomUsers: List<RandomUser>) {
-        if (!::adapter.isInitialized) {
-            adapter = RandomUsersAdapter(requireContext()) {
-                findNavController().navigate(
-                    MainFragmentDirections.actionDestMainToDestUserDetails(it)
-                )
-            }
-        }
-        binding.apply {
-            rvUsers.adapter = adapter
-            adapter.submitList(randomUsers)
         }
     }
 
