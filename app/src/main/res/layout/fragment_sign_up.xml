@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.android.boilerplate.view.auth.signup.SignUpFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/skin_FDF8F4_black_1D1D1D">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            style="@style/SelectableItemBackgroundBorderless"
+            android:layout_width="@dimen/sdp_24"
+            android:layout_height="@dimen/sdp_24"
+            android:layout_marginHorizontal="@dimen/sdp_16"
+            android:layout_marginTop="@dimen/sdp_30"
+            android:contentDescription="@string/back"
+            android:padding="@dimen/sdp_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/tv_poppins_semi_bold_12_black_595959_gray_C8C8C8"
+            android:text="@string/create_free_account"
+            android:textSize="@dimen/ssp_15"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_name"
+            style="@style/et_poppins_regular_12_gray_8D8D8D_white_FFFFFF"
+            android:layout_marginHorizontal="@dimen/sdp_16"
+            android:layout_marginTop="@dimen/sdp_42"
+            android:drawableStart="@drawable/ic_name"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_email"
+            style="@style/et_poppins_regular_12_gray_8D8D8D_white_FFFFFF"
+            android:layout_marginTop="@dimen/sdp_12"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@id/et_name"
+            app:layout_constraintStart_toStartOf="@id/et_name"
+            app:layout_constraintTop_toBottomOf="@id/et_name"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_password"
+            style="@style/et_poppins_regular_12_gray_8D8D8D_white_FFFFFF"
+            android:layout_marginTop="@dimen/sdp_12"
+            android:drawableStart="@drawable/ic_password"
+            android:inputType="textPassword"
+            android:hint="@string/password_with_8_plus_chars"
+            app:layout_constraintEnd_toEndOf="@id/et_name"
+            app:layout_constraintStart_toStartOf="@id/et_name"
+            app:layout_constraintTop_toBottomOf="@id/et_email"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_get_started"
+            style="@style/btn_poppins_semi_bold_13_black_595959"
+            android:layout_marginTop="@dimen/sdp_25"
+            android:text="@string/get_started"
+            app:layout_constraintEnd_toEndOf="@id/et_name"
+            app:layout_constraintStart_toStartOf="@id/et_name"
+            app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_already_have_account"
+            style="@style/tv_poppins_medium_12_gray_8D8D8D_gray_C8C8C8"
+            android:layout_marginTop="@dimen/sdp_18"
+            android:text="@string/already_have_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_get_started"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_login"
+            style="@style/tv_poppins_semi_bold_12_black_595959_gray_C8C8C8"
+            android:layout_marginTop="@dimen/sdp_2"
+            android:text="@string/log_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_already_have_account" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_agree_to_t_and_c"
+            style="@style/tv_poppins_semi_bold_9_gray_8D8D8D_gray_C8C8C8"
+            android:layout_marginTop="@dimen/sdp_21"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/i_agree_with"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_login" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sdp_2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/et_name"
+            app:layout_constraintStart_toStartOf="@id/et_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_agree_to_t_and_c">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_terms_of_service"
+                style="@style/tv_poppins_semi_bold_9_gray_8D8D8D_gray_C8C8C8"
+                android:background="@drawable/bg_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="end"
+                android:paddingHorizontal="@dimen/sdp_4"
+                android:text="@string/terms_and_conditions"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_and"
+                style="@style/tv_poppins_semi_bold_9_gray_8D8D8D_gray_C8C8C8"
+                android:layout_marginHorizontal="@dimen/sdp_1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="@string/and" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_privacy_policy"
+                style="@style/tv_poppins_semi_bold_9_gray_8D8D8D_gray_C8C8C8"
+                android:background="@drawable/bg_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="@dimen/sdp_4"
+                android:text="@string/privacy_policy"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

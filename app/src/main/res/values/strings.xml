@@ -1,8 +1,56 @@
 <resources>
-    <string name="app_name" translatable="false">android-boilerplate-mvvm</string>
-    <string name="app_name_uppercase" translatable="false">ANDROID-BOILERPLATE-MVVM</string>
+    <string name="app_name" translatable="false">AudioBlend</string>
+    <string name="app_name_uppercase" translatable="false">AudioBlend</string>
     <string name="image" translatable="false">-IMG-</string>
     <string name="video" translatable="false">-VID-</string>
+
+    <!--on board-->
+    <string name="create_free_account">Create your free account</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="apple_login">Apple Login</string>
+    <string name="google_login">Google Login</string>
+    <string name="facebook_login">Facebook Login</string>
+
+    <!--sign up-->
+    <string name="back">Back</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password_with_8_plus_chars">Password (8+ characters)</string>
+    <string name="get_started">Get Started</string>
+    <string name="i_agree_with">By Continuing I agree with the</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="and">and</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!--sign in-->
+    <string name="sign_in">Sign-in</string>
+    <string name="password">Password</string>
+    <string name="forgot_password_question">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="dont_have_account">Dont have an account?</string>
+    <string name="create_account">Create Account</string>
+
+    <!--forgot password-->
+    <string name="enter_email_for_otp">Please enter your email address for OTP verification.</string>
+    <string name="need_help_visit_center">If you still need help. <b>Visit our help centre</b></string>
+    <string name="reset_password">Reset Password</string>
+
+    <!--otp verification-->
+    <string name="digits">0123456789</string>
+    <string name="asterisk">*</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="enter_otp_sent_to_email">Please enter OTP sent to you email address.</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP ?</string>
+    <string name="temp_timer">00:00s</string>
+
+    <!--change password-->
+    <string name="create_new_password">Create new password</string>
+    <string name="create_new_password_to_continue">Please create new password to continue.</string>
+    <string name="re_enter_password">Re - Enter Password</string>
+    <string name="create_password">Create Password</string>
 
     <string name="session_expired">Session expired!</string>
     <string name="no_internet_connectivity">No internet connectivity!</string>
@@ -25,7 +73,6 @@
     <string name="languages">Languages</string>
     <string name="more">More</string>
     <string name="feedback">Feedback</string>
-    <string name="privacy_policy">Privacy Policy</string>
     <string name="share">Share</string>
     <string name="share_message">Hey! Download %1$s to get detailed information about your device. https://play.google.com/store/apps/details?id=%2$s</string>
     <string name="rate_us">Rate us</string>

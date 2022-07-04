@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.android.boilerplate.view.auth.onboard.OnBoardFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/skin_FDF8F4_black_1D1D1D">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/sdp_102"
+            android:layout_marginTop="@dimen/sdp_86"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo"
+            tools:ignore="ImageContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_create_free_account"
+            style="@style/btn_poppins_semi_bold_13_black_595959"
+            android:layout_marginHorizontal="@dimen/sdp_13"
+            android:layout_marginTop="@dimen/sdp_36"
+            android:text="@string/create_free_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_already_have_account"
+            style="@style/tv_poppins_medium_12_gray_8D8D8D_gray_C8C8C8"
+            android:layout_marginTop="@dimen/sdp_18"
+            android:text="@string/already_have_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_create_free_account"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_login"
+            style="@style/tv_poppins_semi_bold_12_black_595959_gray_C8C8C8"
+            android:layout_marginTop="@dimen/sdp_2"
+            android:text="@string/log_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_already_have_account" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="@dimen/sdp_99"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/sdp_64"
+            android:background="@color/gray_8D8D8D"
+            android:alpha="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_login" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_or_continue_with"
+            style="@style/tv_poppins_medium_12_gray_8D8D8D_gray_C8C8C8"
+            android:layout_marginTop="@dimen/sdp_24"
+            android:text="@string/or_continue_with"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_divider"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_apple"
+            style="@style/SelectableItemBackgroundBorderless"
+            android:layout_width="@dimen/sdp_32"
+            android:layout_height="@dimen/sdp_32"
+            android:layout_marginTop="@dimen/sdp_40"
+            android:layout_marginEnd="@dimen/sdp_20"
+            android:contentDescription="@string/apple_login"
+            app:layout_constraintEnd_toStartOf="@id/iv_google"
+            app:layout_constraintTop_toBottomOf="@id/tv_or_continue_with"
+            app:srcCompat="@drawable/ic_apple"
+            tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_google"
+            style="@style/SelectableItemBackgroundBorderless"
+            android:layout_width="@dimen/sdp_32"
+            android:layout_height="@dimen/sdp_32"
+            android:layout_marginTop="@dimen/sdp_40"
+            android:contentDescription="@string/google_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_or_continue_with"
+            app:srcCompat="@drawable/ic_google"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_facebook"
+            style="@style/SelectableItemBackgroundBorderless"
+            android:layout_width="@dimen/sdp_32"
+            android:layout_height="@dimen/sdp_32"
+            android:layout_marginStart="@dimen/sdp_20"
+            android:layout_marginTop="@dimen/sdp_40"
+            android:contentDescription="@string/facebook_login"
+            app:layout_constraintStart_toEndOf="@id/iv_google"
+            app:layout_constraintTop_toBottomOf="@id/tv_or_continue_with"
+            app:srcCompat="@drawable/facebook"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

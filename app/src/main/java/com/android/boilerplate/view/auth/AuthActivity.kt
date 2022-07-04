@@ -1,4 +1,4 @@
-package com.android.boilerplate.view.main
+package com.android.boilerplate.view.auth
 
 import android.os.Bundle
 import com.android.boilerplate.R
@@ -10,7 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
  * @author Abdul Rahman
  */
 @AndroidEntryPoint
-class MainActivity : BaseActivity() {
+class AuthActivity : BaseActivity() {
 
     override fun getViewModel(): BaseViewModel? = null
 
@@ -18,6 +18,6 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_auth)
     }
 }
