@@ -19,3 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class com.android.boilerplate.base.model.data.local.BaseModel
+-keep class com.android.boilerplate.base.model.data.remote.request.BaseRequest
+-keep class com.android.boilerplate.base.model.data.remote.response.BaseResponse
