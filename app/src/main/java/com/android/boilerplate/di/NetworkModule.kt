@@ -59,7 +59,7 @@ class NetworkModule {
     @Provides
     fun provideRemoteApi(client: OkHttpClient): RemoteApi {
         val retrofit = Retrofit.Builder()
-            .baseUrl(NetworkEndPoints.PRODUCTION_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

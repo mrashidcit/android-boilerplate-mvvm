@@ -10,23 +10,67 @@ import com.android.boilerplate.aide.utils.SafeClickListener
  * @author Abdul Rahman
  */
 
+/**
+ * Make this view visible
+ */
 fun View.visible() {
     this.visibility = View.VISIBLE
 }
 
-fun View.isVisible() = this.visibility == View.VISIBLE
+/**
+ * Check if this view is visible
+ */
+fun View.isVisible(): Boolean {
+    return this.visibility == View.VISIBLE
+}
 
+/**
+ * Make this view invisible
+ */
 fun View.invisible() {
     this.visibility = View.INVISIBLE
 }
 
-fun View.isInVisible() = this.visibility == View.INVISIBLE
+/**
+ * Check if this view is invisible
+ */
+fun View.isInVisible(): Boolean {
+    return this.visibility == View.INVISIBLE
+}
 
+/**
+ * Make this view gone
+ */
 fun View.gone() {
     this.visibility = View.GONE
 }
 
-fun View.isGone() = this.visibility == View.GONE
+/**
+ * Check if this view is gone
+ */
+fun View.isGone(): Boolean {
+    return this.visibility == View.GONE
+}
+
+/**
+ * Disable this view
+ */
+fun View.disable() {
+    this.apply {
+        isEnabled = false
+        alpha = 0.5f
+    }
+}
+
+/**
+ * Enable this view
+ */
+fun View.enable() {
+    this.apply {
+        isEnabled = true
+        alpha = 1.0f
+    }
+}
 
 /**
  * Expand calling view

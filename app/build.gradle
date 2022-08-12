@@ -31,20 +31,45 @@ android {
 
     bundle {
         language {
+            // locale wise splits
             enableSplit = false
         }
         density {
+            // density wise splits
             enableSplit = true
         }
         abi {
+            // architecture wise splits
             enableSplit = true
         }
     }
 
+    Properties properties = new Properties()
+    if (rootProject.file('gradle.properties').canRead()) {
+        properties.load(rootProject.file("gradle.properties").newDataInputStream())
+    }
+
+    signingConfigs {
+        release {
+            storeFile rootProject.file(properties.getProperty("RELEASE_STORE_FILE"))
+            storePassword properties.getProperty("RELEASE_STORE_PASSWORD")
+            keyAlias properties.getProperty("RELEASE_KEY_ALIAS")
+            keyPassword properties.getProperty("RELEASE_KEY_PASSWORD")
+            // optional
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", properties.getProperty("BASE_URL_DEBUG"))
+        }
         release {
             minifyEnabled true
             shrinkResources true
+            signingConfig signingConfigs.release
+            buildConfigField("String", "BASE_URL", properties.getProperty("BASE_URL_RELEASE"))
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
