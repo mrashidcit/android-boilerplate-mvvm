@@ -23,16 +23,10 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="tv_poppins_semi_bold_9_gray_8D8D8D_gray_C8C8C8" parent="tv_root">
-        <item name="android:fontFamily">@font/poppins_semi_bold</item>
-        <item name="android:textColor">@color/gray_8D8D8D_gray_C8C8C8</item>
-        <item name="android:textSize">@dimen/ssp_9</item>
-    </style>
-
-    <style name="tv_poppins_regular_11_black_1D1D1D_white_FFFFFF" parent="tv_root">
-        <item name="android:fontFamily">@font/poppins_regular</item>
-        <item name="android:textColor">@color/black_1D1D1D_white_FFFFFF</item>
-        <item name="android:textSize">@dimen/ssp_11</item>
+    <style name="tv_roboto_light_13_black_light_white_dark" parent="tv_root">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/black_201E1E_white_FFFFFF</item>
+        <item name="android:textSize">@dimen/ssp_13</item>
     </style>
 
     <style name="tv_poppins_bold_12_black_000000_white_FFFFFF" parent="tv_root">
@@ -47,30 +41,20 @@
         <item name="android:textSize">@dimen/ssp_12</item>
     </style>
 
-    <style name="tv_roboto_light_13_black_light_white_dark" parent="tv_root">
-        <item name="android:fontFamily">@font/roboto_light</item>
-        <item name="android:textColor">@color/black_201E1E_white_FFFFFF</item>
-        <item name="android:textSize">@dimen/ssp_13</item>
-    </style>
-
     <style name="tv_poppins_bold_15_black_1D1D1D_white_FFFFFF" parent="tv_poppins_bold_12_black_1D1D1D_white_FFFFFF">
         <item name="android:textSize">@dimen/ssp_15</item>
     </style>
 
-    <style name="tv_poppins_medium_12_gray_8D8D8D_gray_C8C8C8" parent="tv_root">
-        <item name="android:fontFamily">@font/poppins_medium</item>
-        <item name="android:textColor">@color/gray_8D8D8D_gray_C8C8C8</item>
-        <item name="android:textSize">@dimen/ssp_12</item>
+    <style name="tv_poppins_regular_11_black_1D1D1D_white_FFFFFF" parent="tv_root">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black_1D1D1D_white_FFFFFF</item>
+        <item name="android:textSize">@dimen/ssp_11</item>
     </style>
 
-    <style name="tv_poppins_semi_bold_12_black_595959_gray_C8C8C8" parent="tv_root">
-        <item name="android:fontFamily">@font/poppins_semi_bold</item>
-        <item name="android:textColor">@color/black_595959_gray_C8C8C8</item>
-        <item name="android:textSize">@dimen/ssp_12</item>
-    </style>
     <!-- - - - - - -->
 
     <!-- AppCompatEditText styles - - - - - -->
+
     <style name="et_poppins_medium_12_gray_33393939_white_33FFFFFF" parent="Widget.AppCompat.EditText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -80,39 +64,9 @@
         <item name="android:textSize">@dimen/ssp_12</item>
         <item name="android:background">@drawable/bg_more_container</item>
     </style>
-
-    <style name="et_poppins_regular_12_gray_8D8D8D_white_FFFFFF" parent="Widget.AppCompat.EditText">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">@dimen/sdp_36</item>
-        <item name="android:fontFamily">@font/poppins_regular</item>
-        <item name="android:textSize">@dimen/ssp_12</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:paddingStart">@dimen/sdp_12</item>
-        <item name="android:paddingEnd">@dimen/sdp_12</item>
-        <item name="android:drawablePadding">@dimen/sdp_12</item>
-        <item name="android:background">@drawable/bg_et</item>
-        <item name="android:textCursorDrawable">@drawable/cursor_drawable</item>
-        <item name="android:textColor">@color/gray_8D8D8D_white_FFFFFF</item>
-        <item name="android:textColorHint">@color/gray_66363636_gray_8D8D8D</item>
-    </style>
-
-    <style name="et_poppins_regular_12_gray_8D8D8D_white_FFFFFF_white_bg" parent="et_poppins_regular_12_gray_8D8D8D_white_FFFFFF">
-        <item name="android:background">@drawable/bg_et_otp</item>
-    </style>
     <!-- - - - - - -->
 
-    <!-- AppCompatButton styles - - - - - -->
-    <style name="btn_poppins_semi_bold_13_black_595959" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:textColor">@color/black_595959_gray_C8C8C8</item>
-        <item name="android:textSize">@dimen/sdp_13</item>
-        <item name="android:fontFamily">@font/poppins_semi_bold</item>
-        <item name="android:background">@drawable/bg_btn</item>
-    </style>
-
+    <!-- AppCompatEditText styles - - - - - -->
     <style name="btn_poppins_medium_12_white_FFFFFF" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
