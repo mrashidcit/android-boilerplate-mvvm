@@ -3,36 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/bg_btn.xml" value="0.155" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.141" />
-        <entry key="app/src/main/res/drawable/bg_et.xml" value="0.159" />
-        <entry key="app/src/main/res/drawable/bg_et_otp.xml" value="0.1435" />
-        <entry key="app/src/main/res/drawable/bg_ripple.xml" value="0.159" />
         <entry key="app/src/main/res/drawable/bg_toolbar.xml" value="0.146" />
-        <entry key="app/src/main/res/drawable/cursor_drawable.xml" value="0.1435" />
-        <entry key="app/src/main/res/drawable/ic_apple.xml" value="0.159" />
-        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.159" />
-        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.159" />
-        <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.1545" />
-        <entry key="app/src/main/res/drawable/ic_logo_inset.xml" value="0.1545" />
-        <entry key="app/src/main/res/drawable/ic_logo_title.xml" value="0.1545" />
-        <entry key="app/src/main/res/drawable/ic_name.xml" value="0.159" />
-        <entry key="app/src/main/res/drawable/ic_password.xml" value="0.159" />
-        <entry key="app/src/main/res/drawable/splash_inset.xml" value="0.1545" />
-        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.21435185185185185" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21435185185185185" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.21141552511415526" />
         <entry key="app/src/main/res/layout/dialog_progress.xml" value="0.24010416666666667" />
-        <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.21435185185185185" />
         <entry key="app/src/main/res/layout/fragment_feedback.xml" value="0.24010416666666667" />
-        <entry key="app/src/main/res/layout/fragment_forgot_password.xml" value="0.21435185185185185" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.24114583333333334" />
-        <entry key="app/src/main/res/layout/fragment_on_board.xml" value="0.21141552511415526" />
-        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.21141552511415526" />
-        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.21141552511415526" />
         <entry key="app/src/main/res/layout/fragment_user_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.24114583333333334" />
-        <entry key="app/src/main/res/layout/fragment_verify_otp.xml" value="0.21141552511415526" />
         <entry key="app/src/main/res/layout/item_feedback.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/layout_toolbar.xml" value="0.24114583333333334" />

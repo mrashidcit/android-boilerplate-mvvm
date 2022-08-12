@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AuthTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:statusBarColor">@color/skin_FDF8F4_black_1D1D1D</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:windowBackground">@color/skin_FDF8F4_black_1D1D1D</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-    </style>
-
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/gray_E9EEF1_black_1D1D1D</item>

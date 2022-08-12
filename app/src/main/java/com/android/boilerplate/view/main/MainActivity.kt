@@ -6,9 +6,6 @@ import com.android.boilerplate.base.view.BaseActivity
 import com.android.boilerplate.base.viewmodel.BaseViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-/**
- * @author Abdul Rahman
- */
 @AndroidEntryPoint
 class MainActivity : BaseActivity() {
 

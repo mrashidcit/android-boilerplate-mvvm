@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "audio-blend-android"
+rootProject.name = "android-boilerplate-mvvm"

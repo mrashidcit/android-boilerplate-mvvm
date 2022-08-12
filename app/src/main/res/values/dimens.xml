@@ -2,8 +2,6 @@
 <resources>
 
     <!--ssp equivalent dimen-->
-    <dimen name="ssp_8">@dimen/_8ssp</dimen>
-    <dimen name="ssp_9">@dimen/_9ssp</dimen>
     <dimen name="ssp_10">@dimen/_10ssp</dimen>
     <dimen name="ssp_11">@dimen/_11ssp</dimen>
     <dimen name="ssp_12">@dimen/_12ssp</dimen>
@@ -14,8 +12,6 @@
     <dimen name="ssp_24">@dimen/_24ssp</dimen>
 
     <!--sdp equivalent dimen-->
-    <dimen name="sdp_1">@dimen/_1sdp</dimen>
-    <dimen name="sdp_2">@dimen/_2sdp</dimen>
     <dimen name="sdp_3">@dimen/_3sdp</dimen>
     <dimen name="sdp_4">@dimen/_4sdp</dimen>
     <dimen name="sdp_6">@dimen/_6sdp</dimen>
@@ -24,36 +20,21 @@
     <dimen name="sdp_10">@dimen/_10sdp</dimen>
     <dimen name="sdp_12">@dimen/_12sdp</dimen>
     <dimen name="sdp_13">@dimen/_13sdp</dimen>
-    <dimen name="sdp_14">@dimen/_14sdp</dimen>
-    <dimen name="sdp_16">@dimen/_16sdp</dimen>
     <dimen name="sdp_17">@dimen/_17sdp</dimen>
     <dimen name="sdp_18">@dimen/_18sdp</dimen>
     <dimen name="sdp_19">@dimen/_19sdp</dimen>
     <dimen name="sdp_20">@dimen/_20sdp</dimen>
-    <dimen name="sdp_21">@dimen/_21sdp</dimen>
     <dimen name="sdp_24">@dimen/_24sdp</dimen>
-    <dimen name="sdp_25">@dimen/_25sdp</dimen>
     <dimen name="sdp_26">@dimen/_26sdp</dimen>
-    <dimen name="sdp_28">@dimen/_28sdp</dimen>
     <dimen name="sdp_30">@dimen/_30sdp</dimen>
     <dimen name="sdp_31">@dimen/_31sdp</dimen>
     <dimen name="sdp_32">@dimen/_32sdp</dimen>
     <dimen name="sdp_33">@dimen/_33sdp</dimen>
-    <dimen name="sdp_35">@dimen/_35sdp</dimen>
     <dimen name="sdp_36">@dimen/_36sdp</dimen>
-    <dimen name="sdp_37">@dimen/_37sdp</dimen>
-    <dimen name="sdp_40">@dimen/_40sdp</dimen>
-    <dimen name="sdp_42">@dimen/_42sdp</dimen>
-    <dimen name="sdp_47">@dimen/_47sdp</dimen>
     <dimen name="sdp_50">@dimen/_50sdp</dimen>
     <dimen name="sdp_64">@dimen/_64sdp</dimen>
-    <dimen name="sdp_86">@dimen/_86sdp</dimen>
     <dimen name="sdp_87">@dimen/_87sdp</dimen>
-    <dimen name="sdp_94">@dimen/_94sdp</dimen>
     <dimen name="sdp_96">@dimen/_96sdp</dimen>
-    <dimen name="sdp_98">@dimen/_98sdp</dimen>
-    <dimen name="sdp_99">@dimen/_99sdp</dimen>
-    <dimen name="sdp_102">@dimen/_102sdp</dimen>
     <dimen name="sdp_136">@dimen/_136sdp</dimen>
     <dimen name="sdp_140">@dimen/_140sdp</dimen>
     <dimen name="sdp_160">@dimen/_160sdp</dimen>
