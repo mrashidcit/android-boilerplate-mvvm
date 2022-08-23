@@ -3,8 +3,6 @@
     <string name="settings">Setări</string>
     <string name="language">Limba</string>
     <string name="languages">Limbi</string>
-    <string name="session_expired">Sesiunea a expirat!</string>
-    <string name="no_internet_connectivity">Fără conectivitate la internet!</string>
     <string name="please_confirm">Vă rugăm să confirmați</string>
     <string name="okay">bine</string>
     <string name="cancel">Anulare</string>
@@ -38,4 +36,8 @@
     <string name="users">Utilizatori</string>
     <string name="open_users">Deschideți Utilizatori</string>
     <string name="user_details">Detalii utilizator</string>
+    <string name="error_no_internet_connectivity">Fără conexiune la internet</string>
+    <string name="error_session_expired">Sesiunea a expirat</string>
+    <string name="error_something_went_wrong">Ceva n-a mers bine</string>
+    <string name="error_request_time_out">Solicitați timeout</string>
 </resources>

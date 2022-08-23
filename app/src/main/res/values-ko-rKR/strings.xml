@@ -3,8 +3,6 @@
     <string name="settings">설정</string>
     <string name="language">언어</string>
     <string name="languages">언어</string>
-    <string name="session_expired">세션이 만료되었습니다!</string>
-    <string name="no_internet_connectivity">인터넷 연결이 없습니다!</string>
     <string name="please_confirm">확인 해주세요</string>
     <string name="okay">괜찮아</string>
     <string name="cancel">취소</string>
@@ -38,4 +36,8 @@
     <string name="users">사용자</string>
     <string name="open_users">열린 사용자</string>
     <string name="user_details">사용자 세부 정보</string>
+    <string name="error_no_internet_connectivity">인터넷 연결 없음</string>
+    <string name="error_session_expired">세션이 만료되었습니다.</string>
+    <string name="error_something_went_wrong">문제가 발생했습니다.</string>
+    <string name="error_request_time_out">요청 시간 초과</string>
 </resources>

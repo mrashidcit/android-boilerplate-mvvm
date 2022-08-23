@@ -3,8 +3,6 @@
     <string name="settings">Instellingen</string>
     <string name="language">Taal</string>
     <string name="languages">Talen</string>
-    <string name="session_expired">Sessie verlopen!</string>
-    <string name="no_internet_connectivity">Geen internetverbinding!</string>
     <string name="please_confirm">Bevestig alstublieft</string>
     <string name="okay">Oke</string>
     <string name="cancel">annuleren</string>
@@ -38,4 +36,8 @@
     <string name="users">Gebruikers</string>
     <string name="open_users">Gebruikers openen</string>
     <string name="user_details">gebruikersdetails</string>
+    <string name="error_no_internet_connectivity">Geen internetverbinding</string>
+    <string name="error_session_expired">Sessie verlopen</string>
+    <string name="error_something_went_wrong">Er is iets fout gegaan</string>
+    <string name="error_request_time_out">Verzoek time-out</string>
 </resources>

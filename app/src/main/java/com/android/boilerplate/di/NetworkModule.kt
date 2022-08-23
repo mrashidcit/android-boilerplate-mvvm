@@ -2,7 +2,6 @@ package com.android.boilerplate.di
 
 import com.android.boilerplate.BuildConfig
 import com.android.boilerplate.model.data.local.preference.Preferences
-import com.android.boilerplate.model.data.remote.NetworkEndPoints
 import com.android.boilerplate.model.data.remote.NetworkParams
 import com.android.boilerplate.model.data.remote.RemoteApi
 import dagger.Module

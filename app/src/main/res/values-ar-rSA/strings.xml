@@ -3,8 +3,6 @@
     <string name="settings">إعدادات</string>
     <string name="language">لغة</string>
     <string name="languages">اللغات</string>
-    <string name="session_expired">انتهت الجلسة!</string>
-    <string name="no_internet_connectivity">لا يوجد اتصال بالإنترنت!</string>
     <string name="please_confirm">يرجى تأكيد</string>
     <string name="okay">تمام</string>
     <string name="cancel">يلغي</string>
@@ -38,4 +36,8 @@
     <string name="users">صارفین</string>
     <string name="open_users">صارفین کھولیں۔</string>
     <string name="user_details">صارف کی تفصیلات</string>
+    <string name="error_no_internet_connectivity">لا يوجد اتصال بالإنترنت</string>
+    <string name="error_session_expired">انتهت الجلسة</string>
+    <string name="error_something_went_wrong">هناك خطأ ما</string>
+    <string name="error_request_time_out">طلب مهلة</string>
 </resources>

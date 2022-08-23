@@ -3,7 +3,6 @@ package com.android.boilerplate.base.view
 import android.view.View
 import android.view.Window
 import android.widget.EditText
-import retrofit2.HttpException
 
 /**
  * @author Abdul Rahman
@@ -21,5 +20,5 @@ interface BaseView {
     fun loaderVisibility(visibility: Boolean)
     fun showToast(message: String?)
     fun showSnackBar(view: View, message: String)
-    fun takeActionOnError(exception: HttpException)
+    fun takeActionOnError(exception: Exception)
 }

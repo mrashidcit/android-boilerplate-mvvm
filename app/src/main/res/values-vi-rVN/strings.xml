@@ -3,8 +3,6 @@
     <string name="settings">Cài đặt</string>
     <string name="language">Ngôn ngữ</string>
     <string name="languages">Ngôn ngữ</string>
-    <string name="session_expired">Phiên hết hạn!</string>
-    <string name="no_internet_connectivity">Không có kết nối internet!</string>
     <string name="please_confirm">Vui lòng xác nhận</string>
     <string name="okay">Được chứ</string>
     <string name="cancel">Huỷ bỏ</string>
@@ -38,4 +36,8 @@
     <string name="users">Người dùng</string>
     <string name="open_users">Người dùng mở</string>
     <string name="user_details">Chi tiết người dùng</string>
+    <string name="error_no_internet_connectivity">Không có kết nối internet</string>
+    <string name="error_session_expired">Phiên hết hạn</string>
+    <string name="error_something_went_wrong">Đã xảy ra sự cố</string>
+    <string name="error_request_time_out">Hết thời gian yêu cầu</string>
 </resources>

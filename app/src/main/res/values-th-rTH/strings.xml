@@ -3,8 +3,6 @@
     <string name="settings">การตั้งค่า</string>
     <string name="language">ภาษา</string>
     <string name="languages">ภาษา</string>
-    <string name="session_expired">เซสชันหมดอายุ!</string>
-    <string name="no_internet_connectivity">ไม่มีการเชื่อมต่ออินเทอร์เน็ต!</string>
     <string name="please_confirm">กรุณายืนยัน</string>
     <string name="okay">ตกลง</string>
     <string name="cancel">ยกเลิก</string>
@@ -38,4 +36,8 @@
     <string name="users">ผู้ใช้</string>
     <string name="open_users">ผู้ใช้ที่เปิดอยู่</string>
     <string name="user_details">รายละเอียดผู้ใช้</string>
+    <string name="error_no_internet_connectivity">ไม่มีการเชื่อมต่ออินเทอร์เน็ต</string>
+    <string name="error_session_expired">เซสชั่นหมดอายุ</string>
+    <string name="error_something_went_wrong">บางอย่างผิดพลาด</string>
+    <string name="error_request_time_out">หมดเวลาการร้องขอ</string>
 </resources>

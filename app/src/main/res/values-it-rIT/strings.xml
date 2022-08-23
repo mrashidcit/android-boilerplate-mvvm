@@ -3,8 +3,6 @@
     <string name="settings">impostazioni</string>
     <string name="language">linguaggio</string>
     <string name="languages">Le lingue</string>
-    <string name="session_expired">Sessione scaduta!</string>
-    <string name="no_internet_connectivity">Nessuna connettività Internet!</string>
     <string name="please_confirm">Si prega di confermare</string>
     <string name="okay">Va bene</string>
     <string name="cancel">Annulla</string>
@@ -38,4 +36,8 @@
     <string name="users">Utenti</string>
     <string name="open_users">Utenti aperti</string>
     <string name="user_details">Dettagli utente</string>
+    <string name="error_no_internet_connectivity">Nessuna connettività Internet</string>
+    <string name="error_session_expired">Sessione scaduta</string>
+    <string name="error_something_went_wrong">Qualcosa è andato storto</string>
+    <string name="error_request_time_out">Richiedi timeout</string>
 </resources>

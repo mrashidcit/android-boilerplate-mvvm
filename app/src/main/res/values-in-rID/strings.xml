@@ -3,8 +3,6 @@
     <string name="settings">Pengaturan</string>
     <string name="language">Bahasa</string>
     <string name="languages">Bahasa</string>
-    <string name="session_expired">Sesi berakhir!</string>
-    <string name="no_internet_connectivity">Tidak ada konektivitas internet!</string>
     <string name="please_confirm">Mohon Konfirmasi</string>
     <string name="okay">baik</string>
     <string name="cancel">Membatalkan</string>
@@ -38,4 +36,8 @@
     <string name="users">Pengguna</string>
     <string name="open_users">Buka Pengguna</string>
     <string name="user_details">Detail Pengguna</string>
+    <string name="error_no_internet_connectivity">Tidak ada konektivitas internet</string>
+    <string name="error_session_expired">Sesi berakhir</string>
+    <string name="error_something_went_wrong">Ada yang salah</string>
+    <string name="error_request_time_out">Minta batas waktu</string>
 </resources>

@@ -3,8 +3,6 @@
     <string name="settings">Ajustes</string>
     <string name="language">Idioma</string>
     <string name="languages">Idiomas</string>
-    <string name="session_expired">¡Sesión expirada!</string>
-    <string name="no_internet_connectivity">¡Sin conectividad a Internet!</string>
     <string name="please_confirm">Por favor confirmar</string>
     <string name="okay">Okey</string>
     <string name="cancel">Cancelar</string>
@@ -38,4 +36,8 @@
     <string name="users">Usuarios</string>
     <string name="open_users">Usuarios abiertos</string>
     <string name="user_details">Detalles de usuario</string>
+    <string name="error_no_internet_connectivity">Sin conectividad a internet</string>
+    <string name="error_session_expired">Sesión expirada</string>
+    <string name="error_something_went_wrong">Algo salió mal</string>
+    <string name="error_request_time_out">Pide tiempo fuera</string>
 </resources>

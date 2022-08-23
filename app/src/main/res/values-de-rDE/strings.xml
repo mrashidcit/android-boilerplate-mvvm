@@ -3,8 +3,6 @@
     <string name="settings">die Einstellungen</string>
     <string name="language">Sprache</string>
     <string name="languages">Sprachen</string>
-    <string name="session_expired">Translation results</string>
-    <string name="no_internet_connectivity">Berechtigung erteilen</string>
     <string name="please_confirm">Bitte bestätigen</string>
     <string name="okay">okay</string>
     <string name="cancel">Stornieren</string>
@@ -38,4 +36,8 @@
     <string name="users">Benutzer</string>
     <string name="open_users">Öffnen Sie Benutzer</string>
     <string name="user_details">Nutzerdetails</string>
+    <string name="error_no_internet_connectivity">Keine Internetverbindung</string>
+    <string name="error_session_expired">Sitzung abgelaufen</string>
+    <string name="error_something_went_wrong">Etwas ist schief gelaufen</string>
+    <string name="error_request_time_out">Zeitüberschreitung der Anforderung</string>
 </resources>

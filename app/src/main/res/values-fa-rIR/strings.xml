@@ -3,8 +3,6 @@
     <string name="settings">تنظیمات</string>
     <string name="language">زبان</string>
     <string name="languages">زبان ها</string>
-    <string name="session_expired">جلسه تمام شده!</string>
-    <string name="no_internet_connectivity">بدون اتصال به اینترنت!</string>
     <string name="please_confirm">لطفا تأیید کنید</string>
     <string name="okay">باشه</string>
     <string name="cancel">لغو</string>
@@ -38,4 +36,8 @@
     <string name="users">کاربران</string>
     <string name="open_users">کاربران را باز کنید</string>
     <string name="user_details">مشخصات کاربر</string>
+    <string name="error_no_internet_connectivity">بدون اتصال به اینترنت</string>
+    <string name="error_session_expired">جلسه تمام شده</string>
+    <string name="error_something_went_wrong">مشکلی پیش آمد</string>
+    <string name="error_request_time_out">درخواست مهلت زمانی</string>
 </resources>

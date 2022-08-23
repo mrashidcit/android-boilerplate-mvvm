@@ -9,7 +9,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.observe
 import com.android.boilerplate.base.viewmodel.BaseViewModel
-import retrofit2.HttpException
 
 /**
  * @author Abdul Rahman
@@ -34,11 +33,6 @@ abstract class BaseFragment : Fragment(), BaseView {
             viewModel.loader.observe(viewLifecycleOwner) {
                 it?.let {
                     loaderVisibility(it)
-                }
-            }
-            viewModel.error.observe(viewLifecycleOwner) {
-                it?.let {
-                    showToast(it)
                 }
             }
             viewModel.actionOnError.observe(viewLifecycleOwner) {
@@ -97,7 +91,7 @@ abstract class BaseFragment : Fragment(), BaseView {
         activity?.showSnackBar(view, message)
     }
 
-    override fun takeActionOnError(exception: HttpException) {
+    override fun takeActionOnError(exception: Exception) {
         activity?.takeActionOnError(exception)
     }
 

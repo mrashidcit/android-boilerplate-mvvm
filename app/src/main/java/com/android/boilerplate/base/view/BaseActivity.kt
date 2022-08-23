@@ -28,7 +28,10 @@ import com.android.boilerplate.base.viewmodel.BaseViewModel
 import com.android.boilerplate.model.data.local.preference.Preferences
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.HttpException
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
 import java.util.*
+import java.util.concurrent.TimeoutException
 
 /**
  * @author Abdul Rahman
@@ -87,11 +90,6 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
             viewModel.loader.observe(this) {
                 it?.let {
                     loaderVisibility(it)
-                }
-            }
-            viewModel.error.observe(this) {
-                it?.let {
-                    showToast(it)
                 }
             }
             viewModel.actionOnError.observe(this) {
@@ -178,11 +176,11 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
     }
 
     override fun sessionExpire() {
-        showToast(getString(R.string.session_expired))
+        showToast(getString(R.string.error_session_expired))
     }
 
     override fun noConnectivity() {
-        showToast(getString(R.string.no_internet_connectivity))
+        showToast(getString(R.string.error_no_internet_connectivity))
     }
 
     override fun loaderVisibility(visibility: Boolean) {
@@ -212,12 +210,31 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show()
     }
 
-    override fun takeActionOnError(exception: HttpException) {
-        if (exception.code() == 401) {
-            // unauthorized: take user to auth flow
-            preferences.clear()
-            //startActivity(Intent(this, AuthActivity::class.java))
-            finishAffinity()
+    override fun takeActionOnError(exception: Exception) {
+        when (exception) {
+            is TimeoutException, is SocketTimeoutException -> {
+                showToast(getString(R.string.error_request_time_out))
+            }
+            is UnknownHostException -> {
+                showToast(getString(R.string.error_no_internet_connectivity))
+            }
+            is HttpException -> {
+                when (exception.code()) {
+                    401 -> {
+                        // unauthorized: take user to auth flow
+                        showToast(getString(R.string.error_session_expired))
+                        preferences.clear()
+                        //startActivity(Intent(this, AuthActivity::class.java))
+                        finishAffinity()
+                    }
+                    502 -> {
+                        showToast(getString(R.string.error_something_went_wrong))
+                    }
+                }
+            }
+            else -> {
+                showToast(getString(R.string.error_something_went_wrong))
+            }
         }
     }
 

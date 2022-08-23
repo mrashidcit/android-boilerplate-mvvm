@@ -3,8 +3,6 @@
     <string name="settings">Ayarlar</string>
     <string name="language">Dil</string>
     <string name="languages">Diller</string>
-    <string name="session_expired">Oturum süresi doldu!</string>
-    <string name="no_internet_connectivity">İnternet bağlantısı yok!</string>
     <string name="please_confirm">Lütfen onaylayın</string>
     <string name="okay">Tamam</string>
     <string name="cancel">İptal etmek</string>
@@ -38,4 +36,8 @@
     <string name="users">Kullanıcılar</string>
     <string name="open_users">Açık Kullanıcılar</string>
     <string name="user_details">Kullanıcı detayları</string>
+    <string name="error_no_internet_connectivity">İnternet bağlantısı yok</string>
+    <string name="error_session_expired">Oturum süresi doldu</string>
+    <string name="error_something_went_wrong">Bir şeyler yanlış gitti</string>
+    <string name="error_request_time_out">İstek zaman aşımına uğradı</string>
 </resources>

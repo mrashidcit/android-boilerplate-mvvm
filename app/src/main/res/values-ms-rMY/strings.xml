@@ -3,8 +3,6 @@
     <string name="settings">Tetapan</string>
     <string name="language">Bahasa</string>
     <string name="languages">Bahasa</string>
-    <string name="session_expired">Sesi tamat!</string>
-    <string name="no_internet_connectivity">Tiada sambungan internet!</string>
     <string name="please_confirm">Tolong sahkan</string>
     <string name="okay">baik</string>
     <string name="cancel">Batal</string>
@@ -38,4 +36,8 @@
     <string name="users">Pengguna</string>
     <string name="open_users">Buka Pengguna</string>
     <string name="user_details">Butiran Pengguna</string>
+    <string name="error_no_internet_connectivity">Tiada sambungan internet</string>
+    <string name="error_session_expired">Sesi tamat tempoh</string>
+    <string name="error_something_went_wrong">Sesuatu telah berlaku</string>
+    <string name="error_request_time_out">Permintaan tamat masa</string>
 </resources>
