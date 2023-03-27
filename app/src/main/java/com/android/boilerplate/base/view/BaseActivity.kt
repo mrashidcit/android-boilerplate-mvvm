@@ -32,6 +32,8 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.util.*
 import java.util.concurrent.TimeoutException
+import com.android.boilerplate.base.model.data.remote.response.Result
+import androidx.lifecycle.Observer
 
 /**
  * @author Abdul Rahman
@@ -87,16 +89,18 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         inputManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         getViewModel()?.let { viewModel ->
-            viewModel.loader.observe(this) {
-                it?.let {
-                    loaderVisibility(it)
+            viewModel.event.observe(this, Observer<Any> {
+                when (it) {
+                    is Result.Loading<*> -> {
+                        loaderVisibility(visibility = it.loading as Boolean)
+                    }
+                    is Result.Failure<*> -> {
+                        loaderVisibility(visibility = false)
+                        takeActionOnError(exception = it.exception as Exception)
+                    }
+                    else -> {}
                 }
-            }
-            viewModel.actionOnError.observe(this) {
-                it?.let {
-                    takeActionOnError(it)
-                }
-            }
+            })
         }
         registerNetworkCallback()
     }
@@ -194,22 +198,6 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         }
     }
 
-    /**
-     * Show system Toast
-     */
-    override fun showToast(message: String?) {
-        message?.let {
-            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    /**
-     * Show system SnackBar
-     */
-    override fun showSnackBar(view: View, message: String) {
-        Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show()
-    }
-
     override fun takeActionOnError(exception: Exception) {
         when (exception) {
             is TimeoutException, is SocketTimeoutException -> {
@@ -236,6 +224,22 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
                 showToast(getString(R.string.error_something_went_wrong))
             }
         }
+    }
+
+    /**
+     * Show system Toast
+     */
+    override fun showToast(message: String?) {
+        message?.let {
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * Show system SnackBar
+     */
+    override fun showSnackBar(view: View, message: String) {
+        Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show()
     }
 
     private val networkCallback = object : ConnectivityManager.NetworkCallback() {

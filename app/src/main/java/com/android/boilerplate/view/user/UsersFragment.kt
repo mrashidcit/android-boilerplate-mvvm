@@ -15,6 +15,7 @@ import com.android.boilerplate.databinding.FragmentUsersBinding
 import com.android.boilerplate.model.data.local.database.entities.RandomUser
 import com.android.boilerplate.viewmodel.main.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import com.android.boilerplate.base.model.data.remote.response.Result
 
 /**
  * @author Abdul Rahman
@@ -52,16 +53,27 @@ class UsersFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         binding.apply {
             layoutToolbar.ivBack.setOnClickListener { findNavController().navigateUp() }
             swipeRefreshLayout.setOnRefreshListener(this@UsersFragment)
-            viewModel.randomUsers.observe(viewLifecycleOwner) {
-                it.let {
-                    swipeRefreshLayout.isRefreshing = false
-                    setupRandomUsersAdapters(it)
+            viewModel.usersResultLiveData.observe(viewLifecycleOwner) {
+                when (it) {
+                    // use it for custom view group based loader handling
+                    is Result.Loading -> {}
+                    is Result.Success -> {
+                        it.data?.let { randomUsers ->
+                            swipeRefreshLayout.isRefreshing = false
+                            setupRandomUsersAdapters(randomUsers = randomUsers)
+                        }
+                    }
+                    // use it for custom view group based error handling
+                    is Result.Failure -> {}
                 }
             }
             viewModel.getUsers()
         }
     }
 
+    /**
+     * Used for custom screen based loader handling
+     */
     override fun loaderVisibility(visibility: Boolean) {
         binding.swipeRefreshLayout.apply {
             if (isRefreshing) {

@@ -67,6 +67,10 @@ abstract class BaseDialogFragment : DialogFragment(), BaseView {
         activity?.loaderVisibility(visibility)
     }
 
+    override fun takeActionOnError(exception: Exception) {
+        activity?.takeActionOnError(exception)
+    }
+
     override fun showToast(message: String?) {
         activity?.showToast(message)
     }
